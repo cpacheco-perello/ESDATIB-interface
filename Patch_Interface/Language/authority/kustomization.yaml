@@ -58,8 +58,7 @@ configMapGenerator:
       - en.json=json/simpl-fe-onboarding/participant-utility/en.json
   - name: simpl-logo
     files:
-      - simpl-logo.svg=logos/simpl-logo.svg
-
+      - simpl-logo.svg=logos/LG_CH.png
 # Patch del Deployment existente (solo volumenes y mounts)
 resources:
   - patches/patch-simpl-fe-onboarding.yaml
