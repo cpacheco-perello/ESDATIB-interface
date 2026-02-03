@@ -1,32 +1,30 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: apps/v1
+kind: configMap
 metadata:
-  name: onboarding-i18n-patch
+  name: simpl-fe-onboarding
   namespace: authority01
-data:
-  patch.yaml: |
+spec:
+  template:
     spec:
-      template:
-        spec:
-          volumes:
+      volumes:
+        - name: onboarding-i18n
+          configMap:
+            name: onboarding-i18n
+        - name: onboarding-i18n-ecl
+          configMap:
+            name: onboarding-i18n-ecl
+        - name: onboarding-i18n-eui
+          configMap:
+            name: onboarding-i18n-eui
+      containers:
+        - name: simpl-fe-onboarding
+          volumeMounts:
             - name: onboarding-i18n
-              configMap:
-                name: onboarding-i18n
+              mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
+              subPath: en.json
             - name: onboarding-i18n-ecl
-              configMap:
-                name: onboarding-i18n-ecl
+              mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
+              subPath: en.json
             - name: onboarding-i18n-eui
-              configMap:
-                name: onboarding-i18n-eui
-          containers:
-            - name: simpl-fe-onboarding
-              volumeMounts:
-                - name: onboarding-i18n
-                  mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
-                  subPath: en.json
-                - name: onboarding-i18n-ecl
-                  mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
-                  subPath: en.json
-                - name: onboarding-i18n-eui
-                  mountPath: /usr/share/nginx/html/onboarding/assets/i18n-eui/en.json
-                  subPath: en.json
+              mountPath: /usr/share/nginx/html/onboarding/assets/i18n-eui/en.json
+              subPath: en.json
