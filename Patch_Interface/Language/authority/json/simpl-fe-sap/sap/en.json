@@ -1,0 +1,132 @@
+{
+    "common" : {
+      "yes": "Sí",
+      "no": "No",
+      "signout": "Tanca sessió",
+      "actionCompleted" : "Acció completada",
+      "actionFailed" : "Acció fallida",
+      "forms": {
+        "errors" : {
+          "required": "El camp és obligatori i no pot estar buit."
+        }
+      }
+    },
+    "participantType": {
+      "title": "Tipus de participants",
+      "applicationProvider": "Proveïdor d'aplicacions",
+      "dataProvider": "Proveïdor de dades",
+      "infrastructureProvider": "Proveïdor d'infraestructura",
+      "consumer": "Consumidor",
+      "id": "Id",
+      "name": "Nom",
+      "userEmail": "Correu electrònic",
+      "participantType": "Tipus",
+      "organization": "Organització",
+      "status": "Estat",
+      "outcomeUserEmail": "Usuari de resultat",
+      "description": "Descripció",
+      "assignableToRoles": "Assignable",
+      "enabled": "Habilitat",
+      "creationTimestamp": "Creació",
+      "updateTimestamp": "Actualització",
+      "addAttribute": "Afegeix atribut",
+      "deleteSuccess": "Has eliminat correctament un atribut del tipus de participant",
+      "addSuccess": "Has afegit correctament alguns atributs al tipus de participant",
+      "confirmDeletionMessage": "Confirma l'eliminació de {{code}} del tipus de participant seleccionat",
+      "code": "Codi",
+      "management": "Gestió de tipus de participants"
+    },
+    "applicationProvider": {
+      "title": "Proveïdor d'aplicacions"
+    },
+    "dataProvider": {
+      "title": "Proveïdor de dades"
+    },
+    "infrastructureProvider": {
+      "title": "Proveïdor d'infraestructura"
+    },
+    "consumer": {
+      "title": "Consumidor"
+    },
+    "identityAttributesManagementPage": {
+      "title": "Llista d'atributs",
+      "name": "Nom",
+      "code": "Codi",
+      "builtIn": "Integrat",
+      "identifier": "Identificador",
+      "inUse": "En ús",
+      "assignableToRoles": "Assignable als rols",
+      "enabled": "Habilitat",
+      "creationTimestamp": "Data de creació",
+      "updateTimestamp": "Data de darrera modificació",
+      "newAttribute": "Nou atribut",
+      "confirmDeletionMessage": "Confirma l'eliminació de {{code}}",
+      "deleteSuccess": "Has eliminat correctament un atribut"
+    },
+    "identityAttributesDetail": {
+      "title": "Detalls dels atributs d'identitat",
+      "edit": "Edita atribut",
+      "code": "Codi",
+      "identifier": "Identificador",
+      "name": "Nom",
+      "inUse": "En ús",
+      "assignable": "Assignable als rols",
+      "date": "Data de creació",
+      "lastDate": "Data de darrera modificació",
+      "enabled": "Habilitat",
+      "makeAssignable": "Fes assignable",
+      "makeUnAssignable": "Fes no assignable",
+      "editSuccess": "Has editat correctament un atribut"
+    },
+    "identityAttributesCreate": {
+      "title": "Nou atribut",
+      "createSuccess": "Has creat correctament un atribut"
+    },
+    "simpleInput": {
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "delete": "Elimina",
+      "edit": "Edita",
+      "actions": "Accions",
+      "confirmDeletion": "Confirma l'eliminació",
+      "add": "Afegeix"
+    },
+    "filters": {
+        "title": "Filtre",
+        "titlePlural": "Filtres",
+        "selectColumn": "Selecciona columna",
+        "reset": "Reinicia",
+        "apply": "Aplica",
+        "name": "Nom",
+        "code": "Codi",
+        "builtIn": "Integrat",
+        "placeholder": {
+          "name": "Escriu un nom",
+          "code": "Escriu un codi",
+          "builtIn": "Està integrat?"
+        }
+    },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Accés restringit per rol",
+      "message": "Accés denegat. El teu rol no et permet veure aquest contingut."
+    },
+    "error-page": {
+      "title": "Error",
+      "message": {
+        "400": "La teva sol·licitud no s'ha pogut entendre pel servidor a causa d'una sintaxi incorrecta o paràmetres invàlids. Si us plau, revisa les dades enviades.",
+        "401": "No estàs autoritzat a accedir a aquest recurs. Assegura't d'estar identificat amb les credencials correctes.",
+        "403": "No tens permís per accedir a aquest recurs. Revisa els teus privilegis d'accés.",
+        "404": "El recurs que busques no s'ha trobat al servidor. Verifica la URL o contacta amb el suport.",
+        "500": "El servidor ha trobat un error intern i no ha pogut completar la teva sol·licitud. Torna-ho a intentar més tard.",
+        "501": "El servidor no suporta la funcionalitat requerida per completar la sol·licitud.",
+        "502": "El servidor, actuant com a passarel·la, ha rebut una resposta invàlida del servidor d'origen.",
+        "503": "El servidor no està disponible actualment per sobrecàrrega o manteniment. Torna-ho a intentar més tard.",
+        "504": "El servidor, actuant com a passarel·la, no ha rebut una resposta a temps del servidor d'origen.",
+        "505": "El servidor no suporta la versió del protocol HTTP utilitzada en la sol·licitud.",
+        "508": "El servidor ha detectat un bucle infinit mentre processava la sol·licitud.",
+        "511": "El client ha d'autenticar-se per obtenir accés a la xarxa."
+      }
+    }
+  }
+}

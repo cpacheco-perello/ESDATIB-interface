@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpl-fe-sap
+  namespace: authority01
+spec:
+  template:
+    spec:
+      volumes:
+          - name: sap-onboarding-i18n
+            configMap:
+              name: sap-onboarding-i18n
+          - name: sap-onboarding-i18n-ecl
+            configMap:
+              name: sap-onboarding-i18n-ecl
+          - name: sap-onboarding-i18n-eui
+            configMap:
+              name: sap-onboarding-i18n-eui
+          - name: sap-simpl-shell-i18n
+            configMap:
+              name: sap-simpl-shell-i18n
+          - name: sap-sap-i18n
+            configMap:
+              name: sap-sap-i18n
+          - name: sap-sap-i18n-ecl
+            configMap:
+              name: sap-sap-i18n-ecl
+          - name: sap-sap-i18n-eui
+            configMap:
+              name: sap-sap-i18n-eui
+          - name: sap-identity-provider-i18n
+            configMap:
+              name: sap-identity-provider-i18n
+          - name: sap-identity-provider-i18n-ecl
+            configMap:
+              name: sap-identity-provider-i18n-ecl
+          - name: sap-identity-provider-i18n-eui
+            configMap:
+              name: sap-identity-provider-i18n-eui
+          - name: sap-usersandroles-i18n
+            configMap:
+              name: sap-usersandroles-i18n
+          - name: sap-usersandroles-i18n-ecl
+            configMap:
+              name: sap-usersandroles-i18n-ecl
+          - name: sap-usersandroles-i18n-eui
+            configMap:
+              name: sap-usersandroles-i18n-eui
+          - name: sap-participant-utility-i18n
+            configMap:
+              name: sap-participant-utility-i18n
+          - name: sap-participant-utility-i18n-ecl
+            configMap:
+              name: sap-participant-utility-i18n-ecl
+          - name: sap-participant-utility-i18n-eui
+            configMap:
+              name: sap-participant-utility-i18n-eui
+          - name: simpl-logo
+            configMap:
+              name: simpl-logo
+      containers:
+        - name: simpl-fe-sap
+          volumeMounts:
+              - name: sap-onboarding-i18n
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-onboarding-i18n-ecl
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: sap-onboarding-i18n-eui
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: sap-simpl-shell-i18n
+                mountPath: /usr/share/nginx/html/simpl-shell/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-sap-i18n
+                mountPath: /usr/share/nginx/html/sap/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-sap-i18n-ecl
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: sap-sap-i18n-eui
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: sap-identity-provider-i18n
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-identity-provider-i18n-ecl
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: sap-identity-provider-i18n-eui
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: sap-usersandroles-i18n
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-usersandroles-i18n-ecl
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: sap-usersandroles-i18n-eui
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: sap-participant-utility-i18n
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n/en.json
+                subPath: en.json
+              - name: sap-participant-utility-i18n-ecl
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: sap-participant-utility-i18n-eui
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg

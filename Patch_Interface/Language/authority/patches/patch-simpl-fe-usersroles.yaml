@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpl-fe-usersroles
+  namespace: authority01
+spec:
+  template:
+    spec:
+      volumes:
+          - name: usersroles-onboarding-i18n
+            configMap:
+              name: usersroles-onboarding-i18n
+          - name: usersroles-onboarding-i18n-ecl
+            configMap:
+              name: usersroles-onboarding-i18n-ecl
+          - name: usersroles-onboarding-i18n-eui
+            configMap:
+              name: usersroles-onboarding-i18n-eui
+          - name: usersroles-simpl-shell-i18n
+            configMap:
+              name: usersroles-simpl-shell-i18n
+          - name: usersroles-sap-i18n
+            configMap:
+              name: usersroles-sap-i18n
+          - name: usersroles-sap-i18n-ecl
+            configMap:
+              name: usersroles-sap-i18n-ecl
+          - name: usersroles-sap-i18n-eui
+            configMap:
+              name: usersroles-sap-i18n-eui
+          - name: usersroles-identity-provider-i18n
+            configMap:
+              name: usersroles-identity-provider-i18n
+          - name: usersroles-identity-provider-i18n-ecl
+            configMap:
+              name: usersroles-identity-provider-i18n-ecl
+          - name: usersroles-identity-provider-i18n-eui
+            configMap:
+              name: usersroles-identity-provider-i18n-eui
+          - name: usersroles-usersandroles-i18n
+            configMap:
+              name: usersroles-usersandroles-i18n
+          - name: usersroles-usersandroles-i18n-ecl
+            configMap:
+              name: usersroles-usersandroles-i18n-ecl
+          - name: usersroles-usersandroles-i18n-eui
+            configMap:
+              name: usersroles-usersandroles-i18n-eui
+          - name: usersroles-participant-utility-i18n
+            configMap:
+              name: usersroles-participant-utility-i18n
+          - name: usersroles-participant-utility-i18n-ecl
+            configMap:
+              name: usersroles-participant-utility-i18n-ecl
+          - name: usersroles-participant-utility-i18n-eui
+            configMap:
+              name: usersroles-participant-utility-i18n-eui
+          - name: simpl-logo
+            configMap:
+              name: simpl-logo
+      containers:
+        - name: simpl-fe-usersroles
+          volumeMounts:
+              - name: usersroles-onboarding-i18n
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-onboarding-i18n-ecl
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: usersroles-onboarding-i18n-eui
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: usersroles-simpl-shell-i18n
+                mountPath: /usr/share/nginx/html/simpl-shell/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-sap-i18n
+                mountPath: /usr/share/nginx/html/sap/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-sap-i18n-ecl
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: usersroles-sap-i18n-eui
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: usersroles-identity-provider-i18n
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-identity-provider-i18n-ecl
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: usersroles-identity-provider-i18n-eui
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: usersroles-usersandroles-i18n
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-usersandroles-i18n-ecl
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: usersroles-usersandroles-i18n-eui
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: usersroles-participant-utility-i18n
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n/en.json
+                subPath: en.json
+              - name: usersroles-participant-utility-i18n-ecl
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: usersroles-participant-utility-i18n-eui
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg

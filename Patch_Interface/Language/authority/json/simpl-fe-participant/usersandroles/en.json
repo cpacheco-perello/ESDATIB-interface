@@ -1,0 +1,183 @@
+{
+  "common": {
+    "yes": "Sí",
+    "no": "No"
+  },
+  "userInformationPage": {
+    "title": "Llista d'usuaris",
+    "email": "Correu electrònic",
+    "firstName": "Nom",
+    "lastName": "Cognom",
+    "username": "Nom d'usuari",
+    "updateTimestamp": "Data d'última actualització",
+    "info": "Rols d'usuari",
+    "cancel": "Tanca",
+    "userRoles": "Llista de rols",
+    "newUser": "Crea nou usuari",
+    "noRoles": "No hi ha cap rol per al usuari seleccionat.",
+    "empty": "Sense dades",
+    "filters": {
+      "email": "Correu electrònic",
+      "firstName": "Nom",
+      "lastName":"Cognom",
+      "username": "Nom d'usuari",
+      "placeholder": {
+        "email": "Escriu un correu",
+        "firstName": "Escriu un nom",
+        "lastName":"Escriu un cognom",
+        "username": "Escriu un nom d'usuari"
+      },
+      "search": "Aplica",
+      "reset": "Reinicia"
+    }
+  },
+  "newUser": {
+    "title": "Nou usuari",
+    "email": "Adreça electrònica",
+    "emailPlaceholder": "Correu electrònic",
+    "firstName": "Nom",
+    "firstNamePlaceholder": "Nom",
+    "lastName": "Cognom",
+    "lastNamePlaceholder": "Cognom",
+    "username": "Nom d'usuari",
+    "usernamePlaceholder": "Nom d'usuari",
+    "password": "Contrasenya",
+    "passwordPlaceholder": "Contrasenya",
+    "confirmPassword": "Confirmació de contrasenya",
+    "confirmPasswordPlaceholder": "Confirma la contrasenya",
+    "roles": "Rols",
+    "rolesPlaceholder": "Rols",
+    "rolesEmpty": "No hi ha rols disponibles",
+    "button": "Crea nou usuari",
+    "saveSuccess": "Nou usuari creat correctament",
+    "emailValidation": "Ha de ser un correu electrònic vàlid",
+    "required": "El camp és obligatori i no pot estar buit",
+    "noMatch": "Les contrasenyes no coincideixen",
+    "passwordRules": {
+      "mustBeBetween": "La contrasenya ha de tenir entre",
+      "passwordLength": "{{start}} i {{end}} caràcters de llarg",
+      "containsAtLeast": "i contenir almenys",
+      "uppercaseLetters": "{{num}} lletra majúscula (A-Z)",
+      "lowercaseLetters": "{{num}} lletra minúscula (a-z)",
+      "numbers": "{{num}} número (0-9)",
+      "specialChars": "{{num}} caràcter especial (!£%&&#64; etc).",
+      "forbidden": "La contrasenya no ha de contenir parts del correu electrònic, nom de l'organització, nom, cognom o nom d'usuari superiors a {{num}} caràcters."
+    }
+  },
+  "landing-pages": {
+    "unauthorized": {
+      "title": "Accés restringit per rol",
+      "message": "Accés denegat. El teu rol no et permet veure aquest contingut."
+    },
+    "error-page": {
+      "title": "Error",
+      "message": {
+        "400": "La teva sol·licitud no s'ha pogut entendre pel servidor a causa d'una sintaxi o paràmetres invàlids.",
+        "401": "No estàs autoritzat a accedir a aquest recurs. Assegura't d'estar identificat amb les credencials correctes.",
+        "403": "Accés denegat. El teu rol no et permet veure aquest contingut.",
+        "404": "El recurs que busques no s'ha trobat al servidor.",
+        "500": "El servidor ha trobat un error intern i no ha pogut completar la teva sol·licitud. Torna-ho a intentar més tard.",
+        "501": "El servidor no suporta la funcionalitat requerida per completar la sol·licitud.",
+        "502": "El servidor, actuant com a passarel·la, ha rebut una resposta invàlida del servidor d'origen.",
+        "503": "El servidor no està disponible actualment per sobrecàrrega o manteniment. Torna-ho a intentar més tard.",
+        "504": "El servidor, actuant com a passarel·la, no ha rebut una resposta a temps del servidor d'origen.",
+        "505": "El servidor no suporta la versió del protocol HTTP utilitzada en la sol·licitud.",
+        "508": "El servidor ha detectat un bucle infinit mentre processava la sol·licitud.",
+        "511": "El client ha d'autenticar-se per obtenir accés a la xarxa."
+      }
+    }
+  },
+  "rolesInfoPage": {
+    "empty": "Sense dades",
+    "title": "Llista de rols",
+    "name": "Nom",
+    "description": "Descripció",
+    "detail": "Detall",
+    "showDetail": "Mostra detall",
+    "filters": {
+      "name": "Nom",
+      "description": "Descripció",
+      "placeholder": {
+        "name": "Escriu un nom",
+        "description": "Escriu una descripció"
+      },
+      "search": "Aplica",
+      "reset": "Reinicia"
+    }
+  },
+  "roleDetail": {
+    "title": "Detall del rol",
+    "roleName": "Nom del rol",
+    "roleDescription": "Descripció del rol",
+    "empty": "Sense dades",
+    "resetAttributes": "Reinicia",
+    "saveAttributes": "Desa",
+    "saveChanges": "Desa canvis",
+    "messageChanges": "Això canviarà els atributs d'aquest rol i pot afectar molts usuaris. Vols continuar?",
+    "disabledExplanation": "Aquest atribut no es pot seleccionar perquè no està assignat al participant o no és assignable a un rol.",
+    "updateSuccessMessage": "Atributs del rol canviats correctament",
+    "updateErrorMessage": "No s'han pogut desar els canvis. Torna-ho a intentar més tard.",
+    "filters": {
+      "name": "Nom",
+      "code": "Codi",
+      "updateTimestamp": "Selecciona rang de dates",
+      "updateTimestampFrom": "Data d'inici",
+      "updateTimestampTo": "Data final",
+      "placeholder": {
+        "name": "Escriu un nom",
+        "code": "Escriu un codi"
+      },
+      "search": "Aplica",
+      "reset": "Reinicia"
+    },
+    "identityAttributesInfoPage": {
+      "title": "Llista d'atributs",
+      "name": "Nom",
+      "code": "Codi",
+      "assignableToRoles": "Assignable als rols",
+      "updateTimestamp": "Data d'última sincronització"
+    }
+  },
+  "filters": {
+    "title": "Filtre",
+    "titlePlural": "Filtres",
+    "selectColumn": "Selecciona columna",
+    "statusPlaceholder": "Selecciona valor",
+    "statusEmpty": "---",
+    "emailPlaceholder": "correu electrònic",
+    "reset": "Reinicia",
+    "apply": "Aplica",
+    "name": "Nom",
+    "description": "Descripció",
+    "code": "Codi",
+    "organization": "Nom del participant",
+    "participantType": "Tipus de participant",
+    "email": "Correu electrònic",
+    "onboardingDate": "Data d'incorporació",
+    "updateTimestamp": "Data d'última actualització",
+    "firstName": "Nom",
+    "lastName": "Cognom",
+    "username": "Nom d'usuari"
+  },
+  "identityAttributesInfoPage": {
+    "title": "Llista d'atributs",
+    "name": "Nom",
+    "code": "Codi",
+    "assignableToRoles": "Assignable als rols",
+    "updateTimestamp": "Data d'última sincronització",
+    "empty": "Sense dades",
+    "filters": {
+      "name": "Nom",
+      "code": "Codi",
+      "updateTimestamp": "Selecciona rang de dates",
+      "updateTimestampFrom": "Data d'inici",
+      "updateTimestampTo": "Data final",
+      "placeholder": {
+        "name": "Escriu un nom",
+        "code": "Escriu un codi"
+      },
+      "search": "Aplica",
+      "reset": "Reinicia"
+    }
+  }
+}

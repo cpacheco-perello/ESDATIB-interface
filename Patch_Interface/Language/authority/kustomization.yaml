@@ -59,6 +59,160 @@ configMapGenerator:
   - name: simpl-logo
     files:
       - simpl-logo.svg=logos/LG_CH.svg
+
+# ConfigMaps para simpl-fe-participant
+  - name: participant-onboarding-i18n
+    files:
+      - en.json=json/simpl-fe-participant/onboarding/en.json
+  - name: participant-onboarding-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-participant/onboarding/en.json
+  - name: participant-onboarding-i18n-eui
+    files:
+      - en.json=json/simpl-fe-participant/onboarding/en.json
+  - name: participant-simpl-shell-i18n
+    files:
+      - en.json=json/simpl-fe-participant/simpl-shell/en.json
+  - name: participant-sap-i18n
+    files:
+      - en.json=json/simpl-fe-participant/sap/en.json
+  - name: participant-sap-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-participant/sap/en.json
+  - name: participant-sap-i18n-eui
+    files:
+      - en.json=json/simpl-fe-participant/sap/en.json
+  - name: participant-identity-provider-i18n
+    files:
+      - en.json=json/simpl-fe-participant/identity-provider/en.json
+  - name: participant-identity-provider-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-participant/identity-provider/en.json
+  - name: participant-identity-provider-i18n-eui
+    files:
+      - en.json=json/simpl-fe-participant/identity-provider/en.json
+  - name: participant-usersandroles-i18n
+    files:
+      - en.json=json/simpl-fe-participant/usersandroles/en.json
+  - name: participant-usersandroles-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-participant/usersandroles/en.json
+  - name: participant-usersandroles-i18n-eui
+    files:
+      - en.json=json/simpl-fe-participant/usersandroles/en.json
+  - name: participant-participant-utility-i18n
+    files:
+      - en.json=json/simpl-fe-participant/participant-utility/en.json
+  - name: participant-participant-utility-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-participant/participant-utility/en.json
+  - name: participant-participant-utility-i18n-eui
+    files:
+      - en.json=json/simpl-fe-participant/participant-utility/en.json
+
+# ConfigMaps para simpl-fe-sap
+  - name: sap-onboarding-i18n
+    files:
+      - en.json=json/simpl-fe-sap/onboarding/en.json
+  - name: sap-onboarding-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-sap/onboarding/en.json
+  - name: sap-onboarding-i18n-eui
+    files:
+      - en.json=json/simpl-fe-sap/onboarding/en.json
+  - name: sap-simpl-shell-i18n
+    files:
+      - en.json=json/simpl-fe-sap/simpl-shell/en.json
+  - name: sap-sap-i18n
+    files:
+      - en.json=json/simpl-fe-sap/sap/en.json
+  - name: sap-sap-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-sap/sap/en.json
+  - name: sap-sap-i18n-eui
+    files:
+      - en.json=json/simpl-fe-sap/sap/en.json
+  - name: sap-identity-provider-i18n
+    files:
+      - en.json=json/simpl-fe-sap/identity-provider/en.json
+  - name: sap-identity-provider-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-sap/identity-provider/en.json
+  - name: sap-identity-provider-i18n-eui
+    files:
+      - en.json=json/simpl-fe-sap/identity-provider/en.json
+  - name: sap-usersandroles-i18n
+    files:
+      - en.json=json/simpl-fe-sap/usersandroles/en.json
+  - name: sap-usersandroles-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-sap/usersandroles/en.json
+  - name: sap-usersandroles-i18n-eui
+    files:
+      - en.json=json/simpl-fe-sap/usersandroles/en.json
+  - name: sap-participant-utility-i18n
+    files:
+      - en.json=json/simpl-fe-sap/participant-utility/en.json
+  - name: sap-participant-utility-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-sap/participant-utility/en.json
+  - name: sap-participant-utility-i18n-eui
+    files:
+      - en.json=json/simpl-fe-sap/participant-utility/en.json
+
+# ConfigMaps para simpl-fe-usersroles
+  - name: usersroles-onboarding-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/onboarding/en.json
+  - name: usersroles-onboarding-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-usersroles/onboarding/en.json
+  - name: usersroles-onboarding-i18n-eui
+    files:
+      - en.json=json/simpl-fe-usersroles/onboarding/en.json
+  - name: usersroles-simpl-shell-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/simpl-shell/en.json
+  - name: usersroles-sap-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/sap/en.json
+  - name: usersroles-sap-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-usersroles/sap/en.json
+  - name: usersroles-sap-i18n-eui
+    files:
+      - en.json=json/simpl-fe-usersroles/sap/en.json
+  - name: usersroles-identity-provider-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/identity-provider/en.json
+  - name: usersroles-identity-provider-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-usersroles/identity-provider/en.json
+  - name: usersroles-identity-provider-i18n-eui
+    files:
+      - en.json=json/simpl-fe-usersroles/identity-provider/en.json
+  - name: usersroles-usersandroles-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/usersandroles/en.json
+  - name: usersroles-usersandroles-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-usersroles/usersandroles/en.json
+  - name: usersroles-usersandroles-i18n-eui
+    files:
+      - en.json=json/simpl-fe-usersroles/usersandroles/en.json
+  - name: usersroles-participant-utility-i18n
+    files:
+      - en.json=json/simpl-fe-usersroles/participant-utility/en.json
+  - name: usersroles-participant-utility-i18n-ecl
+    files:
+      - en.json=json/simpl-fe-usersroles/participant-utility/en.json
+  - name: usersroles-participant-utility-i18n-eui
+    files:
+      - en.json=json/simpl-fe-usersroles/participant-utility/en.json
+
 # Patch del Deployment existente (solo volumenes y mounts)
 resources:
   - patches/patch-simpl-fe-onboarding.yaml
+  - patches/patch-simpl-fe-participant.yaml
+  - patches/patch-simpl-fe-sap.yaml
+  - patches/patch-simpl-fe-usersroles.yaml

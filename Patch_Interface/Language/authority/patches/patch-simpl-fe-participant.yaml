@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpl-fe-participant
+  namespace: authority01
+spec:
+  template:
+    spec:
+      volumes:
+          - name: participant-onboarding-i18n
+            configMap:
+              name: participant-onboarding-i18n
+          - name: participant-onboarding-i18n-ecl
+            configMap:
+              name: participant-onboarding-i18n-ecl
+          - name: participant-onboarding-i18n-eui
+            configMap:
+              name: participant-onboarding-i18n-eui
+          - name: participant-simpl-shell-i18n
+            configMap:
+              name: participant-simpl-shell-i18n
+          - name: participant-sap-i18n
+            configMap:
+              name: participant-sap-i18n
+          - name: participant-sap-i18n-ecl
+            configMap:
+              name: participant-sap-i18n-ecl
+          - name: participant-sap-i18n-eui
+            configMap:
+              name: participant-sap-i18n-eui
+          - name: participant-identity-provider-i18n
+            configMap:
+              name: participant-identity-provider-i18n
+          - name: participant-identity-provider-i18n-ecl
+            configMap:
+              name: participant-identity-provider-i18n-ecl
+          - name: participant-identity-provider-i18n-eui
+            configMap:
+              name: participant-identity-provider-i18n-eui
+          - name: participant-usersandroles-i18n
+            configMap:
+              name: participant-usersandroles-i18n
+          - name: participant-usersandroles-i18n-ecl
+            configMap:
+              name: participant-usersandroles-i18n-ecl
+          - name: participant-usersandroles-i18n-eui
+            configMap:
+              name: participant-usersandroles-i18n-eui
+          - name: participant-participant-utility-i18n
+            configMap:
+              name: participant-participant-utility-i18n
+          - name: participant-participant-utility-i18n-ecl
+            configMap:
+              name: participant-participant-utility-i18n-ecl
+          - name: participant-participant-utility-i18n-eui
+            configMap:
+              name: participant-participant-utility-i18n-eui
+          - name: simpl-logo
+            configMap:
+              name: simpl-logo
+      containers:
+        - name: simpl-fe-participant
+          volumeMounts:
+              - name: participant-onboarding-i18n
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-onboarding-i18n-ecl
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: participant-onboarding-i18n-eui
+                mountPath: /usr/share/nginx/html/onboarding/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: participant-simpl-shell-i18n
+                mountPath: /usr/share/nginx/html/simpl-shell/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-sap-i18n
+                mountPath: /usr/share/nginx/html/sap/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-sap-i18n-ecl
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: participant-sap-i18n-eui
+                mountPath: /usr/share/nginx/html/sap/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: participant-identity-provider-i18n
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-identity-provider-i18n-ecl
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: participant-identity-provider-i18n-eui
+                mountPath: /usr/share/nginx/html/identity-provider/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: participant-usersandroles-i18n
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-usersandroles-i18n-ecl
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: participant-usersandroles-i18n-eui
+                mountPath: /usr/share/nginx/html/usersandroles/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: participant-participant-utility-i18n
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n/en.json
+                subPath: en.json
+              - name: participant-participant-utility-i18n-ecl
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-ecl/en.json
+                subPath: en.json
+              - name: participant-participant-utility-i18n-eui
+                mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
+                subPath: en.json
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
