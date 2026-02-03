@@ -57,7 +57,7 @@ spec:
               name: participant-utility-i18n-eui
       containers:
         - name: simpl-fe-onboarding
-            volumeMounts:
+          volumeMounts:
               - name: onboarding-i18n
                 mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
                 subPath: en.json
