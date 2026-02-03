@@ -116,3 +116,18 @@ spec:
               - name: simpl-logo
                 mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
                 subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/simpl-shell/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/sap/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/identity-provider/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/usersandroles/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/participant-utility/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg

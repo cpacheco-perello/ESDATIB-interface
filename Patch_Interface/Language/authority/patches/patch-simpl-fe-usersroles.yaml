@@ -110,9 +110,24 @@ spec:
                 mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-ecl/en.json
                 subPath: en.json
               - name: usersroles-participant-utility-i18n-eui
-              # ===== Logo Mount =====
                 mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
                 subPath: en.json
+              # ===== Logo Mount =====
               - name: simpl-logo
                 mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/simpl-shell/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/sap/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/identity-provider/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/usersandroles/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/participant-utility/assets/images/logo/simpl-logo.svg
                 subPath: simpl-logo.svg
