@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpl-fe-sap
+  namespace: authority01
+spec:
+  template:
+    spec:
+      volumes:
+          - name: simpl-logo
+            configMap:
+              name: simpl-logo
+      containers:
+        - name: simpl-fe-sap
+          volumeMounts:
+              - name: simpl-logo
+                mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
+                subPath: simpl-logo.svg

@@ -7,7 +7,37 @@ namespace: authority01
 resources:
   - json-config
   - logos-config
-  - patches/patch-simpl-fe-onboarding.yaml
-  - patches/patch-simpl-fe-participant.yaml
-  - patches/patch-simpl-fe-sap.yaml
-  - patches/patch-simpl-fe-usersroles.yaml
+
+patches:
+  - path: patches/json/patch-simpl-fe-onboarding-json.yaml
+    target:
+      name: simpl-fe-onboarding
+      kind: Deployment
+  - path: patches/json/patch-simpl-fe-participant-json.yaml
+    target:
+      name: simpl-fe-participant
+      kind: Deployment
+  - path: patches/json/patch-simpl-fe-sap-json.yaml
+    target:
+      name: simpl-fe-sap
+      kind: Deployment
+  - path: patches/json/patch-simpl-fe-usersroles-json.yaml
+    target:
+      name: simpl-fe-usersroles
+      kind: Deployment
+  - path: patches/logos/patch-simpl-fe-onboarding-logos.yaml
+    target:
+      name: simpl-fe-onboarding
+      kind: Deployment
+  - path: patches/logos/patch-simpl-fe-participant-logos.yaml
+    target:
+      name: simpl-fe-participant
+      kind: Deployment
+  - path: patches/logos/patch-simpl-fe-sap-logos.yaml
+    target:
+      name: simpl-fe-sap
+      kind: Deployment
+  - path: patches/logos/patch-simpl-fe-usersroles-logos.yaml
+    target:
+      name: simpl-fe-usersroles
+      kind: Deployment

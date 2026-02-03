@@ -55,9 +55,6 @@ spec:
           - name: sap-participant-utility-i18n-eui
             configMap:
               name: sap-participant-utility-i18n-eui
-          - name: simpl-logo
-            configMap:
-              name: simpl-logo
       containers:
         - name: simpl-fe-sap
           volumeMounts:
@@ -109,6 +106,3 @@ spec:
               - name: sap-participant-utility-i18n-eui
                 mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
                 subPath: en.json
-              - name: simpl-logo
-                mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
-                subPath: simpl-logo.svg
