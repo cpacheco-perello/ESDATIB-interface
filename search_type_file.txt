@@ -1,0 +1,7 @@
+for pod in $(kubectl get pods -n authority01 -o jsonpath='{.items[*].metadata.name}'); do
+  echo "🔍 Pod: $pod"
+  kubectl exec -n authority01 $pod -- find / -name "*.css" 2>/dev/null
+done
+
+
+kubectl exec -n authority01 web-app-123 -- cat /ruta/al/archivo.css

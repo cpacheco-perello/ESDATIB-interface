@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/cpp-FUEIB/ESDATIB-interface
-    path: Patch_Interface/Language/authority
+    path: Patch_Interface/agents/authority
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
