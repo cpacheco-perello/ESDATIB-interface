@@ -26,59 +26,59 @@ spec:
         - name: simpl-fe-css-participant-utility
           configMap:
             name: simpl-fe-css-participant-utility
-          # ===== JSON i18n Volumes =====
-          - name: usersroles-onboarding-i18n
-            configMap:
-              name: usersroles-onboarding-i18n
-          - name: usersroles-onboarding-i18n-ecl
-            configMap:
-              name: usersroles-onboarding-i18n-ecl
-          - name: usersroles-onboarding-i18n-eui
-            configMap:
-              name: usersroles-onboarding-i18n-eui
-          - name: usersroles-simpl-shell-i18n
-            configMap:
-              name: usersroles-simpl-shell-i18n
-          - name: usersroles-sap-i18n
-            configMap:
-              name: usersroles-sap-i18n
-          - name: usersroles-sap-i18n-ecl
-            configMap:
-              name: usersroles-sap-i18n-ecl
-          - name: usersroles-sap-i18n-eui
-            configMap:
-              name: usersroles-sap-i18n-eui
-          - name: usersroles-identity-provider-i18n
-            configMap:
-              name: usersroles-identity-provider-i18n
-          - name: usersroles-identity-provider-i18n-ecl
-            configMap:
-              name: usersroles-identity-provider-i18n-ecl
-          - name: usersroles-identity-provider-i18n-eui
-            configMap:
-              name: usersroles-identity-provider-i18n-eui
-          - name: usersroles-usersandroles-i18n
-            configMap:
-              name: usersroles-usersandroles-i18n
-          - name: usersroles-usersandroles-i18n-ecl
-            configMap:
-              name: usersroles-usersandroles-i18n-ecl
-          - name: usersroles-usersandroles-i18n-eui
-            configMap:
-              name: usersroles-usersandroles-i18n-eui
-          - name: usersroles-participant-utility-i18n
-            configMap:
-              name: usersroles-participant-utility-i18n
-          - name: usersroles-participant-utility-i18n-ecl
-            configMap:
-              name: usersroles-participant-utility-i18n-ecl
-          - name: usersroles-participant-utility-i18n-eui
-            configMap:
-              name: usersroles-participant-utility-i18n-eui
-          # ===== Logo Volume =====
-          - name: simpl-logo
-            configMap:
-              name: simpl-logo
+        # ===== JSON i18n Volumes =====
+        - name: usersroles-onboarding-i18n
+          configMap:
+            name: usersroles-onboarding-i18n
+        - name: usersroles-onboarding-i18n-ecl
+          configMap:
+            name: usersroles-onboarding-i18n-ecl
+        - name: usersroles-onboarding-i18n-eui
+          configMap:
+            name: usersroles-onboarding-i18n-eui
+        - name: usersroles-simpl-shell-i18n
+          configMap:
+            name: usersroles-simpl-shell-i18n
+        - name: usersroles-sap-i18n
+          configMap:
+            name: usersroles-sap-i18n
+        - name: usersroles-sap-i18n-ecl
+          configMap:
+            name: usersroles-sap-i18n-ecl
+        - name: usersroles-sap-i18n-eui
+          configMap:
+            name: usersroles-sap-i18n-eui
+        - name: usersroles-identity-provider-i18n
+          configMap:
+            name: usersroles-identity-provider-i18n
+        - name: usersroles-identity-provider-i18n-ecl
+          configMap:
+            name: usersroles-identity-provider-i18n-ecl
+        - name: usersroles-identity-provider-i18n-eui
+          configMap:
+            name: usersroles-identity-provider-i18n-eui
+        - name: usersroles-usersandroles-i18n
+          configMap:
+            name: usersroles-usersandroles-i18n
+        - name: usersroles-usersandroles-i18n-ecl
+          configMap:
+            name: usersroles-usersandroles-i18n-ecl
+        - name: usersroles-usersandroles-i18n-eui
+          configMap:
+            name: usersroles-usersandroles-i18n-eui
+        - name: usersroles-participant-utility-i18n
+          configMap:
+            name: usersroles-participant-utility-i18n
+        - name: usersroles-participant-utility-i18n-ecl
+          configMap:
+            name: usersroles-participant-utility-i18n-ecl
+        - name: usersroles-participant-utility-i18n-eui
+          configMap:
+            name: usersroles-participant-utility-i18n-eui
+        # ===== Logo Volume =====
+        - name: simpl-logo
+          configMap:
+            name: simpl-logo
       containers:
         - name: simpl-fe-usersroles
           # ===== JSON i18n Mounts =====

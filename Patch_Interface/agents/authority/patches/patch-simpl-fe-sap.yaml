@@ -26,59 +26,59 @@ spec:
         - name: simpl-fe-css-participant-utility
           configMap:
             name: simpl-fe-css-participant-utility
-          # ===== JSON i18n Volumes =====
-          - name: sap-onboarding-i18n
-            configMap:
-              name: sap-onboarding-i18n
-          - name: sap-onboarding-i18n-ecl
-            configMap:
-              name: sap-onboarding-i18n-ecl
-          - name: sap-onboarding-i18n-eui
-            configMap:
-              name: sap-onboarding-i18n-eui
-          - name: sap-simpl-shell-i18n
-            configMap:
-              name: sap-simpl-shell-i18n
-          - name: sap-sap-i18n
-            configMap:
-              name: sap-sap-i18n
-          - name: sap-sap-i18n-ecl
-            configMap:
-              name: sap-sap-i18n-ecl
-          - name: sap-sap-i18n-eui
-            configMap:
-              name: sap-sap-i18n-eui
-          - name: sap-identity-provider-i18n
-            configMap:
-              name: sap-identity-provider-i18n
-          - name: sap-identity-provider-i18n-ecl
-            configMap:
-              name: sap-identity-provider-i18n-ecl
-          - name: sap-identity-provider-i18n-eui
-            configMap:
-              name: sap-identity-provider-i18n-eui
-          - name: sap-usersandroles-i18n
-            configMap:
-              name: sap-usersandroles-i18n
-          - name: sap-usersandroles-i18n-ecl
-            configMap:
-              name: sap-usersandroles-i18n-ecl
-          - name: sap-usersandroles-i18n-eui
-            configMap:
-              name: sap-usersandroles-i18n-eui
-          - name: sap-participant-utility-i18n
-            configMap:
-              name: sap-participant-utility-i18n
-          - name: sap-participant-utility-i18n-ecl
-            configMap:
-              name: sap-participant-utility-i18n-ecl
-          - name: sap-participant-utility-i18n-eui
-            configMap:
-              name: sap-participant-utility-i18n-eui
-          # ===== Logo Volume =====
-          - name: simpl-logo
-            configMap:
-              name: simpl-logo
+        # ===== JSON i18n Volumes =====
+        - name: sap-onboarding-i18n
+          configMap:
+            name: sap-onboarding-i18n
+        - name: sap-onboarding-i18n-ecl
+          configMap:
+            name: sap-onboarding-i18n-ecl
+        - name: sap-onboarding-i18n-eui
+          configMap:
+            name: sap-onboarding-i18n-eui
+        - name: sap-simpl-shell-i18n
+          configMap:
+            name: sap-simpl-shell-i18n
+        - name: sap-sap-i18n
+          configMap:
+            name: sap-sap-i18n
+        - name: sap-sap-i18n-ecl
+          configMap:
+            name: sap-sap-i18n-ecl
+        - name: sap-sap-i18n-eui
+          configMap:
+            name: sap-sap-i18n-eui
+        - name: sap-identity-provider-i18n
+          configMap:
+            name: sap-identity-provider-i18n
+        - name: sap-identity-provider-i18n-ecl
+          configMap:
+            name: sap-identity-provider-i18n-ecl
+        - name: sap-identity-provider-i18n-eui
+          configMap:
+            name: sap-identity-provider-i18n-eui
+        - name: sap-usersandroles-i18n
+          configMap:
+            name: sap-usersandroles-i18n
+        - name: sap-usersandroles-i18n-ecl
+          configMap:
+            name: sap-usersandroles-i18n-ecl
+        - name: sap-usersandroles-i18n-eui
+          configMap:
+            name: sap-usersandroles-i18n-eui
+        - name: sap-participant-utility-i18n
+          configMap:
+            name: sap-participant-utility-i18n
+        - name: sap-participant-utility-i18n-ecl
+          configMap:
+            name: sap-participant-utility-i18n-ecl
+        - name: sap-participant-utility-i18n-eui
+          configMap:
+            name: sap-participant-utility-i18n-eui
+        # ===== Logo Volume =====
+        - name: simpl-logo
+          configMap:
+            name: simpl-logo
       containers:
         - name: simpl-fe-sap
           # ===== JSON i18n Mounts =====
