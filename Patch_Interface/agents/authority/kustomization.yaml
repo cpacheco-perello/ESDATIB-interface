@@ -7,6 +7,7 @@ namespace: authority01
 resources:
   - json-config
   - logos-config
+  - css-config
   - patches/patch-simpl-fe-onboarding.yaml
   - patches/patch-simpl-fe-participant.yaml
   - patches/patch-simpl-fe-sap.yaml
