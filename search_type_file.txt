@@ -4,4 +4,4 @@ for pod in $(kubectl get pods -n authority01 -o jsonpath='{.items[*].metadata.na
 done
 
 
-kubectl exec -n authority01 simpl-fe-onboarding-9d457d559-vtcwr -- cat /usr/share/nginx/html/simpl-shell/styles.7cfb3136cfd0d2d9.css
+kubectl exec -n authority01 simpl-fe-onboarding-9d457d559-rc6wk -- cat /usr/share/nginx/html/usersandroles/styles.a198e9b8e4401c04.css

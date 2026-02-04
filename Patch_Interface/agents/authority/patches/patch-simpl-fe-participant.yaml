@@ -7,6 +7,25 @@ spec:
   template:
     spec:
       volumes:
+        # ===== CSS Volumes (todos los submódulos) =====
+        - name: simpl-fe-css-onboarding
+          configMap:
+            name: simpl-fe-css-onboarding
+        - name: simpl-fe-css-simpl-shell
+          configMap:
+            name: simpl-fe-css-simpl-shell
+        - name: simpl-fe-css-sap
+          configMap:
+            name: simpl-fe-css-sap
+        - name: simpl-fe-css-identity-provider
+          configMap:
+            name: simpl-fe-css-identity-provider
+        - name: simpl-fe-css-usersandroles
+          configMap:
+            name: simpl-fe-css-usersandroles
+        - name: simpl-fe-css-participant-utility
+          configMap:
+            name: simpl-fe-css-participant-utility
           # ===== JSON i18n Volumes =====
           - name: participant-onboarding-i18n
             configMap:
@@ -64,6 +83,25 @@ spec:
         - name: simpl-fe-participant
           # ===== JSON i18n Mounts =====
           volumeMounts:
+            # ===== CSS Mounts (todos los submódulos) =====
+            - name: simpl-fe-css-onboarding
+              mountPath: /usr/share/nginx/html/onboarding/assets/styles/styles.css
+              subPath: styles.css
+            - name: simpl-fe-css-simpl-shell
+              mountPath: /usr/share/nginx/html/simpl-shell/assets/styles/styles.css
+              subPath: styles.css
+            - name: simpl-fe-css-sap
+              mountPath: /usr/share/nginx/html/sap/assets/styles/styles.css
+              subPath: styles.css
+            - name: simpl-fe-css-identity-provider
+              mountPath: /usr/share/nginx/html/identity-provider/assets/styles/styles.css
+              subPath: styles.css
+            - name: simpl-fe-css-usersandroles
+              mountPath: /usr/share/nginx/html/usersandroles/assets/styles/styles.css
+              subPath: styles.css
+            - name: simpl-fe-css-participant-utility
+              mountPath: /usr/share/nginx/html/participant-utility/assets/styles/styles.css
+              subPath: styles.css
               - name: participant-onboarding-i18n
                 mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
                 subPath: en.json

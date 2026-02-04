@@ -1,1 +1,161 @@
-/* Placeholder for simpl-shell styles */
+:root {
+    --eui-c-branding: #002B6E;
+    --eui-c-branding-dark: #081638;
+    --eui-c-branding-light: #316AE6;
+    --eui-c-primary: #B60F8D;
+    --eui-c-primary-darker: #752764;
+    --eui-c-primary-dark: #9B0D78;
+    --eui-c-primary-light: #EDCFE8;
+    --eui-c-primary-lighter: #F9E4F5;
+    --eui-c-primary-lightest: #FFFFFF;
+    --eui-c-primary-bg: #FCF2F9;
+    --eui-c-primary-bg-light: #FDF9FB;
+    --eui-c-info: #4094AA;
+    --eui-c-info-dark: #143A3E;
+    --eui-c-info-darker: #00181C;
+    --eui-c-info-light: #51E7F9;
+    --eui-c-info-lighter: #BDEDF7;
+    --eui-c-info-lightest: #D2F3FA;
+    --eui-c-info-bg: #EFFAFC;
+    --eui-c-info-bg-light: #F4FBFD;
+    --eui-c-accent: #002B6E;
+    --eui-c-accent-dark: #0B204C;
+    --eui-c-accent-darker: #081638;
+    --eui-c-accent-light: #739BEC;
+    --eui-c-accent-lighter: #B8CCF5;
+    --eui-c-accent-lightest: #D2DFF9;
+    --eui-c-accent-bg: #EDF2FC;
+    --eui-c-accent-bg-light: #F6F9FE;
+    --eui-c-success: #002B6E;
+    --eui-c-success-dark: #0B204C;
+    --eui-c-success-darker: #081638;
+    --eui-c-success-light: #739BEC;
+    --eui-c-success-lighter: #B8CCF5;
+    --eui-c-success-lightest: #D2DFF9;
+    --eui-c-success-bg: #EDF2FC;
+    --eui-c-success-bg-light: #F6F9FE;
+    --eui-c-warning: #E89B3B;
+    --eui-c-warning-dark: #5D3D13;
+    --eui-c-warning-darker: #2E1E0A;
+    --eui-c-warning-light: #F1C37E;
+    --eui-c-warning-lighter: #F5D6A5;
+    --eui-c-warning-lightest: #FBEAD1;
+    --eui-c-warning-bg: #FEF7EF;
+    --eui-c-warning-bg-light: #FEFBF7;
+    --eui-c-danger: #CA3532;
+    --eui-c-danger-dark: #781E1D;
+    --eui-c-danger-darker: #290909;
+    --eui-c-danger-light: #DF7B7D;
+    --eui-c-danger-lighter: #E8A5A7;
+    --eui-c-danger-lightest: #FBEFEF;
+    --eui-c-danger-bg: #FEF7F7;
+    --eui-c-danger-bg-light: #FFFBFB;
+    --eui-c-neutral: #37393F;
+    --eui-c-neutral-dark: #111113;
+    --eui-c-neutral-darker: #141414;
+    --eui-c-neutral-light: #6B6F7B;
+    --eui-c-neutral-lighter: #8B8E98;
+    --eui-c-neutral-bg: #F5F5F5;
+    --eui-c-neutral-bg-light: #FCFCFC
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%
+}
+
+body simpl-splash-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background-color: #f9fafb;
+    color: #243882;
+    z-index: 999999;
+    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .4s cubic-bezier(.4, 0, .2, 1)
+}
+
+body simpl-splash-screen .simpl-title {
+    font-size: large;
+    font-weight: 700
+}
+
+body:not(.simpl-splash-screen-hidden) {
+    overflow: hidden
+}
+
+body.simpl-splash-screen-hidden simpl-splash-screen {
+    display: none
+}
+
+body simpl-splash-screen .spinner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 200px
+}
+
+body simpl-splash-screen .spinner>div {
+    width: 24px;
+    height: 24px;
+    background-color: #243882;
+    border-radius: 100%;
+    display: inline-block;
+    animation: simpl-bouncedelay 1s infinite ease-in-out both
+}
+
+body simpl-splash-screen .spinner .bounce1 {
+    animation-delay: -.32s
+}
+
+body simpl-splash-screen .spinner .bounce2 {
+    animation-delay: -.16s
+}
+
+body simpl-splash-screen .spinner .bounce3 {
+    animation-delay: -.16s
+}
+
+body simpl-splash-screen .spinner .bounce4 {
+    animation-delay: -.16s
+}
+
+body simpl-splash-screen .spinner .bounce5 {
+    animation-delay: -.16s
+}
+
+@keyframes simpl-bouncedelay {
+
+    0%,
+    80%,
+    to {
+        transform: scale(0)
+    }
+
+    40% {
+        transform: scale(1)
+    }
+}
+
+.eui-tree-node-wrapper__container-middle.eui-label--selected {
+    background: var(--eui-c-neutral-bg) !important
+}
+
+.eui-tree-node-wrapper__container-middle.error {
+    background: var(--eui-c-danger-light) !important
+}
+
+.eui-tree-node-wrapper__container-middle.error * {
+    color: var(--eui-c-danger-bg) !important
+}
+
+.eui-tree-node__button {
+    margin-top: -25px !important
+}
