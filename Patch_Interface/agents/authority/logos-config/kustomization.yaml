@@ -9,4 +9,4 @@ generatorOptions:
 configMapGenerator:
   - name: simpl-logo
     files:
-      - simpl-logo.svg=logos/simpl-logo.svg
+      - simpl-logo.svg=logos/simpl-logo.png

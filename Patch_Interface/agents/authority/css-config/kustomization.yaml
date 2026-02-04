@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: authority01
+generatorOptions:
+  disableNameSuffixHash: true
+
+# ConfigMaps para cada ruta CSS (6 rutas diferentes en Nginx)
+configMapGenerator:
+  - name: simpl-fe-css-onboarding
+    files:
+      - styles.css=css/simpl-fe/onboarding.css
+  - name: simpl-fe-css-simpl-shell
+    files:
+      - styles.css=css/simpl-fe/simpl-shell.css
+  - name: simpl-fe-css-sap
+    files:
+      - styles.css=css/simpl-fe/sap.css
+  - name: simpl-fe-css-identity-provider
+    files:
+      - styles.css=css/simpl-fe/identity-provider.css
+  - name: simpl-fe-css-usersandroles
+    files:
+      - styles.css=css/simpl-fe/usersandroles.css
+  - name: simpl-fe-css-participant-utility
+    files:
+      - styles.css=css/simpl-fe/participant-utility.css
