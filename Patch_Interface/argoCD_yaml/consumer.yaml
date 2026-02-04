@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: consumer-traduccions
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cpp-FUEIB/ESDATIB-interface
+    path: Patch_Interface/agents/consumer
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: consumer01
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

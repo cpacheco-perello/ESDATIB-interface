@@ -58,10 +58,10 @@ spec:
       containers:
         - name: simpl-fe-participant
           volumeMounts:
-            # ===== CSS Mounts (todos los submódulos) =====
-            - name: consumer-simpl-fe-css-onboarding
-              mountPath: /usr/share/nginx/html/onboarding/assets/styles/styles.css
-              subPath: nboarding-i18n-ecl
+            - name: consumer-participant-onboarding-i18n
+              mountPath: /usr/share/nginx/html/onboarding/assets/i18n/en.json
+              subPath: en.json
+            - name: consumer-participant-onboarding-i18n-ecl
               mountPath: /usr/share/nginx/html/onboarding/assets/i18n-ecl/en.json
               subPath: en.json
             - name: consumer-participant-onboarding-i18n-eui
@@ -106,22 +106,3 @@ spec:
             - name: consumer-participant-participant-utility-i18n-eui
               mountPath: /usr/share/nginx/html/participant-utility/assets/i18n-eui/en.json
               subPath: en.json
-            # ===== Logo Mount =====
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/onboarding/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/simpl-shell/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/sap/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/identity-provider/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/usersandroles/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
-            - name: consumer-simpl-logo
-              mountPath: /usr/share/nginx/html/participant-utility/assets/images/logo/simpl-logo.svg
-              subPath: simpl-logo.svg
