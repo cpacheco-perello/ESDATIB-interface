@@ -11,6 +11,6 @@ configMapGenerator:
     files:
       - index.astro.mjs=astro/catalogue-ui/index.astro.mjs
       - index.astro=astro/catalogue-ui/index.astro
-      - SearchTabs.vue=astro/catalogue-ui/SearchTabs.vue
+      - SearchTabs.js=astro/catalogue-ui/SearchTabs.js
       - AdvancedSearch.vue=astro/catalogue-ui/AdvancedSearch.vue
       - QuickSearch.vue=astro/catalogue-ui/QuickSearch.vue

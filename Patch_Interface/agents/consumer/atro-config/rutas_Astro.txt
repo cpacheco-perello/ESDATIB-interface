@@ -6,3 +6,6 @@
 /app/src/pages//components/PageHeader.vue
 /app/src/components/search/SearchTabs.vue
 /app/src/components/search/AdvancedSearch.vue
+
+
+/app/dist/client/_astro/SearchTabs.B7fDCIoC.js
