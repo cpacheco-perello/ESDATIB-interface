@@ -8,5 +8,5 @@ generatorOptions:
 configMapGenerator:
   - name: authority-onboarding-html
     files:
-      - index.html=html/onboarding/index.html
+      - index.html=html/simpl-fe-onboarding/onboarding/index.html
       
