@@ -6,8 +6,13 @@ metadata:
 spec:
   template:
     spec:
-      volumes:
+      volumes:    
+            # ===== HTML Volumes =====
+        - name: onboarding-html
+          configMap:
+            name: authority-onboarding-html
         # ===== CSS Volumes (todos los submódulos) =====
+
         - name: simpl-fe-css-onboarding
           configMap:
             name: simpl-fe-css-onboarding
@@ -82,8 +87,13 @@ spec:
       containers:
         - name: simpl-fe-onboarding
           # ===== JSON i18n Mounts =====
-          volumeMounts:
+          volumeMounts:  
+          # ===== HTML Mounts =====
+            - name: onboarding-html
+              mountPath: /usr/share/nginx/html/onboarding/index.html
+              subPath: index.html
             # ===== CSS Mounts (todos los submódulos) =====
+
             - name: simpl-fe-css-onboarding
               mountPath: /usr/share/nginx/html/onboarding/styles.89583e0616aa3a16.css
               subPath: styles.css

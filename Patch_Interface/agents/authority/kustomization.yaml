@@ -8,6 +8,7 @@ resources:
   - json-config
   - logos-config
   - css-config
+  - html-config
   - patches/patch-simpl-fe-onboarding.yaml
   - patches/patch-simpl-fe-participant.yaml
   - patches/patch-simpl-fe-sap.yaml
