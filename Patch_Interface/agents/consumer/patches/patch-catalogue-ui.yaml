@@ -26,5 +26,6 @@ spec:
               mountPath: /app/src/pages/index.astro
               subPath: index.astro
             - name: consumer-catalogue-ui-astro
-              mountPath: /app/dist/client/_astro/SearchTabs.B7fDCIoC.js
+              mountPath: /app/dist/client/_astro/SearchTabs.BgFWpVDB.js
               subPath: SearchTabs.js
+
