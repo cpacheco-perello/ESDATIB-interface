@@ -11,9 +11,9 @@ spec:
         - name: onboarding-html
           configMap:
             name: authority-onboarding-html
-        - name: onboarding-js
+        - name: onboarding-js-566
           configMap:
-            name: authority-onboarding-html
+            name: authority-onboarding-js-566
         # ===== CSS Volumes (todos los submódulos) =====
 
         - name: simpl-fe-css-onboarding
@@ -95,7 +95,7 @@ spec:
             - name: onboarding-html
               mountPath: /usr/share/nginx/html/onboarding/index.html
               subPath: index.html
-            - name: onboarding-js
+            - name: onboarding-js-566
               mountPath: /usr/share/nginx/html/onboarding/566.ef436edf86258396.js
               subPath: 566.js
             # ===== CSS Mounts (todos los submódulos) =====
