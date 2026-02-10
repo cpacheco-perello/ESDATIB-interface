@@ -1,262 +1,61 @@
-import "./index.BRbk5JsM.js";
+import "./index.CgJZnPxS.js";
 import {
-  s as Z,
-  M as j,
-  d as $,
-  l as ee,
-  G as re,
-  y as z,
-  I as G,
-  b as ae,
-  T as te,
-  A as se,
-} from "./vue-components.Yee89CK1.js";
-import {
-  B as ne,
-  e as o,
+  d as R,
+  n as o,
   o as s,
-  g as d,
-  f as u,
-  q as b,
-  u as w,
-  d as y,
-  c as m,
-  v,
-  h as S,
-  a as B,
-  x as _,
-  t as i,
-  y as g,
-  z as Q,
-  A as oe,
-  C as le,
-  D as q,
-  E as K,
-  G as U,
-  r as h,
-  i as ce,
-  I as ie,
-  b as de,
-} from "./pinia.2mrf23z1.js";
-import {
-  R as ue,
-  f as he,
-  h as me,
-  a as E,
-} from "./ResourceDescriptionSummary.aUi7cN5V.js";
-import { _ as R } from "./_plugin-vue_export-helper.DlAUqK2U.js";
-var fe = `
-    .p-card {
-        background: dt('card.background');
-        color: dt('card.color');
-        box-shadow: dt('card.shadow');
-        border-radius: dt('card.border.radius');
-        display: flex;
-        flex-direction: column;
-    }
-
-    .p-card-caption {
-        display: flex;
-        flex-direction: column;
-        gap: dt('card.caption.gap');
-    }
-
-    .p-card-body {
-        padding: dt('card.body.padding');
-        display: flex;
-        flex-direction: column;
-        gap: dt('card.body.gap');
-    }
-
-    .p-card-title {
-        font-size: dt('card.title.font.size');
-        font-weight: dt('card.title.font.weight');
-    }
-
-    .p-card-subtitle {
-        color: dt('card.subtitle.color');
-    }
-`,
-  pe = {
-    root: "p-card p-component",
-    header: "p-card-header",
-    body: "p-card-body",
-    caption: "p-card-caption",
-    title: "p-card-title",
-    subtitle: "p-card-subtitle",
-    content: "p-card-content",
-    footer: "p-card-footer",
-  },
-  Se = ne.extend({ name: "card", style: fe, classes: pe }),
-  _e = {
-    name: "BaseCard",
-    extends: Z,
-    style: Se,
-    provide: function () {
-      return { $pcCard: this, $parentInstance: this };
-    },
-  },
-  H = { name: "Card", extends: _e, inheritAttrs: !1 };
-function ve(a, t, r, e, n, c) {
-  return (
-    s(),
-    o(
-      "div",
-      b({ class: a.cx("root") }, a.ptmi("root")),
-      [
-        a.$slots.header
-          ? (s(),
-            o(
-              "div",
-              b({ key: 0, class: a.cx("header") }, a.ptm("header")),
-              [w(a.$slots, "header")],
-              16,
-            ))
-          : d("", !0),
-        u(
-          "div",
-          b({ class: a.cx("body") }, a.ptm("body")),
-          [
-            a.$slots.title || a.$slots.subtitle
-              ? (s(),
-                o(
-                  "div",
-                  b({ key: 0, class: a.cx("caption") }, a.ptm("caption")),
-                  [
-                    a.$slots.title
-                      ? (s(),
-                        o(
-                          "div",
-                          b({ key: 0, class: a.cx("title") }, a.ptm("title")),
-                          [w(a.$slots, "title")],
-                          16,
-                        ))
-                      : d("", !0),
-                    a.$slots.subtitle
-                      ? (s(),
-                        o(
-                          "div",
-                          b(
-                            { key: 1, class: a.cx("subtitle") },
-                            a.ptm("subtitle"),
-                          ),
-                          [w(a.$slots, "subtitle")],
-                          16,
-                        ))
-                      : d("", !0),
-                  ],
-                  16,
-                ))
-              : d("", !0),
-            u(
-              "div",
-              b({ class: a.cx("content") }, a.ptm("content")),
-              [w(a.$slots, "content")],
-              16,
-            ),
-            a.$slots.footer
-              ? (s(),
-                o(
-                  "div",
-                  b({ key: 1, class: a.cx("footer") }, a.ptm("footer")),
-                  [w(a.$slots, "footer")],
-                  16,
-                ))
-              : d("", !0),
-          ],
-          16,
-        ),
-      ],
-      16,
-    )
-  );
-}
-H.render = ve;
-const be = y({
-  __name: "ResourceDescriptionCard",
-  props: { item: {}, showMoreDetails: { type: Boolean } },
-  setup(a, { expose: t }) {
-    t();
-    const r = a,
-      e = B(() => r.item.claimsGraphUri?.[0] ?? ""),
-      n = {
-        props: r,
-        selfDescriptionID: e,
-        get SButton() {
-          return j;
-        },
-        get Card() {
-          return H;
-        },
-        ResourceDescriptionSummary: ue,
-      };
-    return (
-      Object.defineProperty(n, "__isScriptSetup", {
-        enumerable: !1,
-        value: !0,
-      }),
-      n
-    );
-  },
-});
-function ge(a, t, r, e, n, c) {
-  return (
-    s(),
-    m(
-      e.Card,
-      {
-        ref: "searchResultElement",
-        class: "search-result bg-surface-1 flex flex-col",
-        "data-sd-id": e.selfDescriptionID,
-      },
-      {
-        content: v(() => [
-          S(
-            e.ResourceDescriptionSummary,
-            { "show-more-details": "", "search-result": r.item },
-            null,
-            8,
-            ["search-result"],
-          ),
-        ]),
-        footer: v(() => [
-          r.showMoreDetails
-            ? (s(),
-              m(
-                e.SButton,
-                {
-                  key: 0,
-                  class: "more-details flex-grow-0 self-start",
-                  variant: "primary",
-                  label: "Més detalls",
-                  href: "/resource-description/" + e.selfDescriptionID,
-                },
-                null,
-                8,
-                ["href"],
-              ))
-            : d("", !0),
-        ]),
-        _: 1,
-      },
-      8,
-      ["data-sd-id"],
-    )
-  );
-}
-const ye = R(be, [["render", ge]]),
-  Re = y({
+  p as d,
+  q as W,
+  t as S,
+  u as l,
+  F as p,
+  v as I,
+  c as _,
+  a as K,
+  x as Y,
+  y as f,
+  z as X,
+  A as Z,
+  C as $,
+  W as ee,
+  K as ae,
+  D as re,
+  E as N,
+  G as B,
+  I as v,
+  J as y,
+  L as F,
+  r as u,
+  f as te,
+  M as se,
+  O as ne,
+  Q as U,
+  R as q,
+  T as Q,
+  V as ce,
+  b as le,
+  X as oe,
+  Y as ie,
+} from "./vue-components.BBBbsI74.js";
+import { _ as x } from "./_plugin-vue_export-helper.DlAUqK2U.js";
+import { f as L } from "./services.CJ3D2YoZ.js";
+const ue = R({
     __name: "SearchResults",
     props: {
       result: {},
       showJson: { type: Boolean, default: !1 },
       resultsNumberSuffix: {},
     },
-    setup(a, { expose: t }) {
-      t();
-      const r = a,
-        e = B(() => r.result?.length ?? 0),
-        n = { props: r, resultCount: e, ResourceDescriptionCard: ye };
+    setup(t, { expose: r }) {
+      r();
+      const a = t,
+        e = K(() => a.result?.length ?? 0),
+        n = {
+          props: a,
+          resultCount: e,
+          get ResourceDescriptionCard() {
+            return Y;
+          },
+        };
       return (
         Object.defineProperty(n, "__isScriptSetup", {
           enumerable: !1,
@@ -266,47 +65,50 @@ const ye = R(be, [["render", ge]]),
       );
     },
   }),
-  ke = { class: "border-t" },
-  xe = { class: "search-results-details mb-10 pt-3" },
-  Ce = { class: "mb-1 text-xl" },
-  De = { class: "number-of-results" },
-  we = { class: "search-results flex flex-col gap-4 md:grid md:grid-cols-2" };
-function Oe(a, t, r, e, n, c) {
+  de = { class: "border-t" },
+  he = { class: "search-results-details mb-10 pt-3" },
+  me = { class: "mb-1 text-xl" },
+  _e = { class: "number-of-results" },
+  fe = { class: "search-results flex flex-col gap-4 md:grid md:grid-cols-2" };
+function Se(t, r, a, e, n, i) {
   return (
     s(),
-    o("div", ke, [
-      u("div", xe, [
-        u("p", Ce, [
-          u("span", De, i(e.resultCount), 1),
-          _(
+    o("div", de, [
+      d("div", he, [
+        d("p", me, [
+          d("span", _e, l(e.resultCount), 1),
+          S(
             " result" +
-              i(e.resultCount !== 1 ? "s" : "") +
+              l(e.resultCount !== 1 ? "s" : "") +
               " " +
-              i(r.resultsNumberSuffix),
+              l(a.resultsNumberSuffix),
             1,
           ),
         ]),
-        w(a.$slots, "details"),
+        W(t.$slots, "details"),
       ]),
-      u("div", we, [
+      d("div", fe, [
         (s(!0),
         o(
-          g,
+          p,
           null,
-          Q(
-            r.result,
-            (l) => (
+          I(
+            a.result,
+            (c) => (
               s(),
-              m(
+              _(
                 e.ResourceDescriptionCard,
                 {
-                  key: l.title || l.name || l.claimsGraphUri?.[0],
-                  item: l,
+                  key: c.claimsGraphUri?.[0],
+                  "search-result": c,
                   "show-more-details": !0,
+                  "card-button": {
+                    href: `/resourceDescriptions/${c.claimsGraphUri?.[0]}`,
+                  },
                 },
                 null,
                 8,
-                ["item"],
+                ["search-result", "card-button"],
               )
             ),
           ),
@@ -316,16 +118,16 @@ function Oe(a, t, r, e, n, c) {
     ])
   );
 }
-const J = R(Re, [["render", Oe]]),
-  Te = y({
+const G = x(ue, [["render", Se]]),
+  ve = R({
     __name: "FormattedNumberRangeValue",
     props: { label: {}, numberRange: {} },
-    setup(a, { expose: t }) {
-      t();
+    setup(t, { expose: r }) {
+      r();
       const e = {
         isMin: (n) => n.includes(">"),
         get invertOperator() {
-          return $;
+          return X;
         },
       };
       return (
@@ -337,123 +139,123 @@ const J = R(Re, [["render", Oe]]),
       );
     },
   });
-function Pe(a, t, r, e, n, c) {
+function pe(t, r, a, e, n, i) {
   return (
     s(),
     o("span", null, [
-      e.isMin(r.numberRange.op1)
+      e.isMin(a.numberRange.op1)
         ? (s(),
           o(
-            g,
+            p,
             { key: 0 },
             [
-              _(
-                i(r.numberRange.value1) +
+              S(
+                l(a.numberRange.value1) +
                   " " +
-                  i(e.invertOperator(r.numberRange.op1)),
+                  l(e.invertOperator(a.numberRange.op1)),
                 1,
               ),
             ],
             64,
           ))
-        : r.numberRange.op2 && e.isMin(r.numberRange.op2)
+        : a.numberRange.op2 && e.isMin(a.numberRange.op2)
           ? (s(),
             o(
-              g,
+              p,
               { key: 1 },
               [
-                _(
-                  i(r.numberRange.value2) +
+                S(
+                  l(a.numberRange.value2) +
                     " " +
-                    i(e.invertOperator(r.numberRange.op2)),
+                    l(e.invertOperator(a.numberRange.op2)),
                   1,
                 ),
               ],
               64,
             ))
-          : d("", !0),
-      _(" " + i(r.label) + " ", 1),
-      r.numberRange.op2 && !e.isMin(r.numberRange.op2)
+          : f("", !0),
+      S(" " + l(a.label) + " ", 1),
+      a.numberRange.op2 && !e.isMin(a.numberRange.op2)
         ? (s(),
           o(
-            g,
+            p,
             { key: 2 },
-            [_(i(r.numberRange.op2) + " " + i(r.numberRange.value2), 1)],
+            [S(l(a.numberRange.op2) + " " + l(a.numberRange.value2), 1)],
             64,
           ))
-        : e.isMin(r.numberRange.op1)
-          ? d("", !0)
+        : e.isMin(a.numberRange.op1)
+          ? f("", !0)
           : (s(),
             o(
-              g,
+              p,
               { key: 3 },
-              [_(i(r.numberRange.op1) + " " + i(r.numberRange.value1), 1)],
+              [S(l(a.numberRange.op1) + " " + l(a.numberRange.value1), 1)],
               64,
             )),
     ])
   );
 }
-const Ae = R(Te, [["render", Pe]]),
-  Le = y({
+const be = x(ve, [["render", pe]]),
+  ge = R({
     __name: "SearchedProperties",
     props: { input: {}, level: { default: 0 } },
-    setup(a, { expose: t }) {
-      t();
-      const r = {
+    setup(t, { expose: r }) {
+      r();
+      const a = {
         get isAdvancedSearchNumberRangeValue() {
-          return ee;
+          return re;
         },
-        FormattedNumberRangeValue: Ae,
         get humanizeLabel() {
-          return me;
+          return ae;
         },
         get filterOutAtTypes() {
-          return he;
+          return ee;
         },
+        FormattedNumberRangeValue: be,
       };
       return (
-        Object.defineProperty(r, "__isScriptSetup", {
+        Object.defineProperty(a, "__isScriptSetup", {
           enumerable: !1,
           value: !0,
         }),
-        r
+        a
       );
     },
   }),
-  Ee = { class: "search-parameter-label font-semibold" },
-  Ve = { key: 1, class: "search-parameter-value" };
-function je(a, t, r, e, n, c) {
-  const l = oe("SearchedProperties", !0);
-  return r.input &&
-    typeof r.input != "string" &&
-    Object.keys(r.input).length > 0
+  ye = { class: "search-parameter-label font-semibold" },
+  Re = { key: 1, class: "search-parameter-value" };
+function xe(t, r, a, e, n, i) {
+  const c = Z("SearchedProperties", !0);
+  return a.input &&
+    typeof a.input != "string" &&
+    Object.keys(a.input).length > 0
     ? (s(),
       o(
         "div",
         {
           key: 0,
-          style: le({ marginLeft: `${r.level}rem` }),
+          style: $({ marginLeft: `${a.level}rem` }),
           class: "search-parameter leading-6",
         },
         [
           (s(!0),
           o(
-            g,
+            p,
             null,
-            Q(
-              e.filterOutAtTypes(r.input),
-              (f, p) => (
+            I(
+              e.filterOutAtTypes(a.input),
+              (h, m) => (
                 s(),
                 o("div", null, [
-                  u("span", Ee, i(e.humanizeLabel(p)) + ": ", 1),
-                  e.isAdvancedSearchNumberRangeValue(f)
+                  d("span", ye, l(e.humanizeLabel(m)) + ": ", 1),
+                  e.isAdvancedSearchNumberRangeValue(h)
                     ? (s(),
-                      m(
+                      _(
                         e.FormattedNumberRangeValue,
                         {
                           key: 0,
-                          label: e.humanizeLabel(p),
-                          "number-range": f,
+                          label: e.humanizeLabel(m),
+                          "number-range": h,
                           class: "search-parameter-value",
                         },
                         null,
@@ -461,7 +263,7 @@ function je(a, t, r, e, n, c) {
                         ["label", "number-range"],
                       ))
                     : (s(),
-                      m(l, { key: 1, input: f, level: r.level + 1 }, null, 8, [
+                      _(c, { key: 1, input: h, level: a.level + 1 }, null, 8, [
                         "input",
                         "level",
                       ])),
@@ -473,33 +275,33 @@ function je(a, t, r, e, n, c) {
         ],
         4,
       ))
-    : typeof r.input == "string"
-      ? (s(), o("span", Ve, i(r.input), 1))
-      : d("", !0);
+    : typeof a.input == "string"
+      ? (s(), o("span", Re, l(a.input), 1))
+      : f("", !0);
 }
-const Be = R(Le, [["render", je]]),
-  Me = y({
+const ke = x(ge, [["render", xe]]),
+  Ce = R({
     __name: "SearchedPropertiesTree",
     props: { inputProperties: {} },
-    setup(a, { expose: t }) {
-      t();
-      const r = { SearchedProperties: Be };
+    setup(t, { expose: r }) {
+      r();
+      const a = { SearchedProperties: ke };
       return (
-        Object.defineProperty(r, "__isScriptSetup", {
+        Object.defineProperty(a, "__isScriptSetup", {
           enumerable: !1,
           value: !0,
         }),
-        r
+        a
       );
     },
   });
-function Ne(a, t, r, e, n, c) {
+function Oe(t, r, a, e, n, i) {
   return (
     s(),
-    m(
+    _(
       e.SearchedProperties,
       {
-        input: r.inputProperties,
+        input: a.inputProperties,
         level: 0,
         class: "latest-search-parameters flex flex-col gap-2",
       },
@@ -509,29 +311,29 @@ function Ne(a, t, r, e, n, c) {
     )
   );
 }
-const Ie = R(Me, [["render", Ne]]),
-  W = (a) => a.items.map((t) => Object.values(t)[0]),
-  Fe = (a) =>
-    a.Service.map((t) => ({ label: t.replace(/\.ttl/, ""), value: t })),
-  qe = (a) => {
-    if (!a || Object.keys(a).length === 0) return;
-    const t = {};
-    for (const [r, e] of Object.entries(a))
-      for (const [n, c] of Object.entries(e)) {
-        const l = n.replace(/^[^:]*:/, ""),
-          f =
-            r.split(":")[0] +
+const De = x(Ce, [["render", Oe]]),
+  z = (t) => t.items.map((r) => Object.values(r)[0]),
+  we = (t) =>
+    t.Service.map((r) => ({ label: r.replace(/\.ttl/, ""), value: r })),
+  Pe = (t) => {
+    if (!t || Object.keys(t).length === 0) return;
+    const r = {};
+    for (const [a, e] of Object.entries(t))
+      for (const [n, i] of Object.entries(e)) {
+        const c = n.replace(/^[^:]*:/, ""),
+          h =
+            a.split(":")[0] +
             ":" +
-            r.split(":")[1].slice(0, 1).toUpperCase() +
-            r.split(":")[1].slice(1);
-        t[f] = { ...t[f], "@type": r, [l]: c };
+            a.split(":")[1].slice(0, 1).toUpperCase() +
+            a.split(":")[1].slice(1);
+        r[h] = { ...r[h], "@type": a, [c]: i };
       }
-    return t;
+    return r;
   };
-function Ke() {
+function Te() {
   return {
     fetchSearchSchemas: () =>
-      E(
+      L(
         "/api/schemas",
         {
           method: "GET",
@@ -539,159 +341,159 @@ function Ke() {
           apiName: "xsfc advanced search be",
           defaultData: [],
         },
-        Fe,
+        we,
       ),
-    fetchConvertedSchema: (r) =>
-      E(`/api/schemas/${r}/content?schemaUIType=advancedSearch`, {
+    fetchConvertedSchema: (a) =>
+      L(`/api/schemas/${a}/content?schemaUIType=advancedSearch`, {
         method: "GET",
         errorIdentifier: "TTL_CONVERT_ERROR",
         apiName: "catalogue UI ttl to json",
       }),
   };
 }
-async function Ue(a) {
-  return E(
+async function Le(t) {
+  return L(
     "/api/selfDescriptions/advanced",
     {
       method: "POST",
-      body: a,
+      body: t,
       errorIdentifier: "ADVANCED_SEARCH_ERROR",
       apiName: "advanced search",
       defaultData: [],
     },
-    W,
+    z,
   );
 }
-const ze = y({
+const Ve = R({
     __name: "AdvancedSearch",
-    setup(a, { expose: t }) {
-      t();
-      const { fetchSearchSchemas: r, fetchConvertedSchema: e } = Ke(),
-        n = h([]),
-        c = h(),
-        l = h(null),
-        f = h(!0),
-        p = ce({ data: {}, errors: [] }),
-        C = h(null),
-        D = h(!1),
-        T = h(!1),
-        V = h([]),
-        P = h(null),
-        O = h(null),
-        M = h(null),
-        N = h(0);
-      r().then(({ data: k, error: x }) => {
-        (x.value
-          ? (O.value = x.value)
-          : ((O.value = null), (n.value = k.value)),
-          (f.value = !1));
+    setup(t, { expose: r }) {
+      r();
+      const { fetchSearchSchemas: a, fetchConvertedSchema: e } = Te(),
+        n = u([]),
+        i = u(),
+        c = u(null),
+        h = u(!0),
+        m = te({ data: {}, errors: [] }),
+        k = u(null),
+        C = u(!1),
+        D = u(!1),
+        V = u([]),
+        w = u(null),
+        O = u(null),
+        E = u(null),
+        j = u(0);
+      a().then(({ data: b, error: g }) => {
+        (g.value
+          ? (O.value = g.value)
+          : ((O.value = null), (n.value = b.value)),
+          (h.value = !1));
       });
-      const Y = async (k) => {
-          ((c.value = k), (p.data = {}));
-          const { data: x, error: L } = await e(k);
-          L.value
-            ? (O.value = L.value)
+      const J = async (b) => {
+          ((i.value = b), (m.data = {}));
+          const { data: g, error: T } = await e(b);
+          T.value
+            ? (O.value = T.value)
             : ((O.value = null),
-              (l.value = x.value?.root
-                ? Object.values(x.value.root)[0]
+              (c.value = g.value?.root
+                ? Object.values(g.value.root)[0]
                 : void 0));
         },
-        X = async (k) => {
-          p.errors = k.errors ?? [];
+        H = async (b) => {
+          m.errors = b.errors ?? [];
         },
-        A = B(() => qe(p.data)),
-        I = {
-          fetchSearchSchemas: r,
+        P = K(() => Pe(m.data)),
+        A = {
+          fetchSearchSchemas: a,
           fetchConvertedSchema: e,
           schemas: n,
-          selectedSchemaKey: c,
-          selectedSchema: l,
-          isSchemasLoading: f,
-          form: p,
-          lastSearchedProperties: C,
-          isSearchLoading: D,
-          showResults: T,
+          selectedSchemaKey: i,
+          selectedSchema: c,
+          isSchemasLoading: h,
+          form: m,
+          lastSearchedProperties: k,
+          isSearchLoading: C,
+          showResults: D,
           result: V,
-          errorDetails: P,
+          errorDetails: w,
           schemasErrorDetails: O,
-          resultsContainer: M,
-          formKey: N,
-          selectShape: Y,
-          onChange: X,
-          searchData: A,
-          handleSearchSubmit: async (k) => {
-            if (!A.value) return;
-            ((T.value = !1), (C.value = ie(A.value)));
-            const x = M.value.getBoundingClientRect().top + window.scrollY;
-            (window.scrollTo({ top: x, behavior: "smooth" }), (D.value = !0));
-            const { data: L, error: F } = await Ue(A.value);
-            (F.value
-              ? (P.value = F.value)
-              : ((P.value = null), (V.value = L.value)),
-              (D.value = !1),
-              (T.value = !0));
+          resultsContainer: E,
+          formKey: j,
+          selectShape: J,
+          onChange: H,
+          searchData: P,
+          handleSearchSubmit: async (b) => {
+            if (!P.value) return;
+            ((D.value = !1), (k.value = se(P.value)));
+            const g = E.value.getBoundingClientRect().top + window.scrollY;
+            (window.scrollTo({ top: g, behavior: "smooth" }), (C.value = !0));
+            const { data: T, error: M } = await Le(P.value);
+            (M.value
+              ? (w.value = M.value)
+              : ((w.value = null), (V.value = T.value)),
+              (C.value = !1),
+              (D.value = !0));
           },
           resetForm: () => {
-            ((p.data = {}),
-              (p.errors = []),
-              N.value++,
-              (T.value = !1),
+            ((m.data = {}),
+              (m.errors = []),
+              j.value++,
+              (D.value = !1),
               (V.value = []),
-              (C.value = null),
-              (P.value = null));
+              (k.value = null),
+              (w.value = null));
           },
           get SSelect() {
-            return ae;
+            return ce;
           },
           get SButton() {
-            return j;
+            return Q;
           },
           get SLoadingSpinner() {
-            return G;
+            return q;
           },
           get SStatusMessage() {
-            return z;
+            return U;
           },
           get SJsonFormsWrapper() {
-            return re;
+            return ne;
           },
-          SearchResults: J,
-          SearchedPropertiesTree: Ie,
+          SearchResults: G,
+          SearchedPropertiesTree: De,
         };
       return (
-        Object.defineProperty(I, "__isScriptSetup", {
+        Object.defineProperty(A, "__isScriptSetup", {
           enumerable: !1,
           value: !0,
         }),
-        I
+        A
       );
     },
   }),
-  Ge = { class: "schemas-loading flex h-20 items-center justify-center pt-4" },
-  Qe = { class: "flex flex-col gap-y-4 pt-4 pb-20" },
-  He = { class: "flex max-w-screen-md flex-col gap-y-4" },
-  Je = { class: "flex flex-row justify-end gap-4" },
-  We = { ref: "resultsContainer" },
-  Ye = { class: "flex flex-col gap-4" };
-function Xe(a, t, r, e, n, c) {
+  Ee = { class: "schemas-loading flex h-20 items-center justify-center pt-4" },
+  je = { class: "flex flex-col gap-y-4 pt-4 pb-20" },
+  Ae = { class: "flex max-w-screen-md flex-col gap-y-4" },
+  Me = { class: "flex flex-row justify-end gap-4" },
+  Ne = { ref: "resultsContainer" },
+  Be = { class: "flex flex-col gap-4" };
+function Fe(t, r, a, e, n, i) {
   return (
     s(),
     o(
-      g,
+      p,
       null,
       [
-        q(u("div", Ge, [S(e.SLoadingSpinner, { class: "h-20 w-20" })], 512), [
-          [K, e.isSchemasLoading],
+        N(d("div", Ee, [v(e.SLoadingSpinner, { class: "h-20 w-20" })], 512), [
+          [B, e.isSchemasLoading],
         ]),
-        q(
-          u(
+        N(
+          d(
             "div",
-            Qe,
+            je,
             [
-              u("div", He, [
+              d("div", Ae, [
                 e.schemasErrorDetails
                   ? (s(),
-                    m(
+                    _(
                       e.SStatusMessage,
                       {
                         key: 0,
@@ -700,24 +502,24 @@ function Xe(a, t, r, e, n, c) {
                         variant: "error",
                       },
                       {
-                        default: v(() => [
-                          _(i(e.schemasErrorDetails.description), 1),
+                        default: y(() => [
+                          S(l(e.schemasErrorDetails.description), 1),
                         ]),
                         _: 1,
                       },
                       8,
                       ["title"],
                     ))
-                  : d("", !0),
+                  : f("", !0),
                 e.schemas.length
                   ? (s(),
-                    m(
+                    _(
                       e.SSelect,
                       {
                         key: 1,
                         modelValue: e.selectedSchemaKey,
                         "onUpdate:modelValue":
-                          t[0] || (t[0] = (l) => (e.selectedSchemaKey = l)),
+                          r[0] || (r[0] = (c) => (e.selectedSchemaKey = c)),
                         id: "search-schema",
                         options: e.schemas,
                         label: "Tipus de recurs",
@@ -727,7 +529,7 @@ function Xe(a, t, r, e, n, c) {
                       8,
                       ["modelValue", "options"],
                     ))
-                  : d("", !0),
+                  : f("", !0),
               ]),
               e.selectedSchema
                 ? (s(),
@@ -736,17 +538,17 @@ function Xe(a, t, r, e, n, c) {
                     {
                       key: e.formKey,
                       action: "",
-                      onSubmit: U(e.handleSearchSubmit, ["prevent"]),
+                      onSubmit: F(e.handleSearchSubmit, ["prevent"]),
                       class: "flex max-w-screen-md flex-col gap-y-4 pb-5",
                     },
                     [
-                      u("div", null, [
-                        S(
+                      d("div", null, [
+                        v(
                           e.SJsonFormsWrapper,
                           {
                             data: e.form.data,
                             "onUpdate:data":
-                              t[1] || (t[1] = (l) => (e.form.data = l)),
+                              r[1] || (r[1] = (c) => (e.form.data = c)),
                             schema: e.selectedSchema,
                             "form-schema-variant": "advancedSearch",
                             onChange: e.onChange,
@@ -756,8 +558,8 @@ function Xe(a, t, r, e, n, c) {
                           ["data", "schema"],
                         ),
                       ]),
-                      u("div", Je, [
-                        S(
+                      d("div", Me, [
+                        v(
                           e.SButton,
                           {
                             severity: "secondary",
@@ -766,13 +568,13 @@ function Xe(a, t, r, e, n, c) {
                               !e.form.data ||
                               Object.keys(e.form.data).length === 0,
                             onClick: e.resetForm,
-                            label: "Neteja paràmetres",
+                            label: "Netejar paràmetres",
                           },
                           null,
                           8,
                           ["disabled"],
                         ),
-                        S(
+                        v(
                           e.SButton,
                           {
                             class: "advanced-search-button",
@@ -784,7 +586,7 @@ function Xe(a, t, r, e, n, c) {
                               e.isSearchLoading ||
                               !e.searchData ||
                               Object.keys(e.searchData).length === 0,
-                            onSubmit: U(e.handleSearchSubmit, ["prevent"]),
+                            onSubmit: F(e.handleSearchSubmit, ["prevent"]),
                             label: "Cerca",
                           },
                           null,
@@ -793,23 +595,23 @@ function Xe(a, t, r, e, n, c) {
                         ),
                         e.isSearchLoading
                           ? (s(),
-                            m(e.SLoadingSpinner, {
+                            _(e.SLoadingSpinner, {
                               key: 0,
                               class: "search-loading ml-4",
                             }))
-                          : d("", !0),
+                          : f("", !0),
                       ]),
                     ],
                     32,
                   ))
-                : d("", !0),
-              u(
+                : f("", !0),
+              d(
                 "div",
-                We,
+                Ne,
                 [
                   e.showResults
                     ? (s(),
-                      m(
+                      _(
                         e.SearchResults,
                         {
                           key: 0,
@@ -817,11 +619,11 @@ function Xe(a, t, r, e, n, c) {
                           "results-number-suffix": "for the parameters:",
                         },
                         {
-                          details: v(() => [
-                            u("div", Ye, [
+                          details: y(() => [
+                            d("div", Be, [
                               e.lastSearchedProperties
                                 ? (s(),
-                                  m(
+                                  _(
                                     e.SearchedPropertiesTree,
                                     {
                                       key: 0,
@@ -832,10 +634,10 @@ function Xe(a, t, r, e, n, c) {
                                     8,
                                     ["input-properties"],
                                   ))
-                                : d("", !0),
+                                : f("", !0),
                               e.errorDetails
                                 ? (s(),
-                                  m(
+                                  _(
                                     e.SStatusMessage,
                                     {
                                       key: 1,
@@ -843,15 +645,15 @@ function Xe(a, t, r, e, n, c) {
                                       variant: "error",
                                     },
                                     {
-                                      default: v(() => [
-                                        _(i(e.errorDetails.description), 1),
+                                      default: y(() => [
+                                        S(l(e.errorDetails.description), 1),
                                       ]),
                                       _: 1,
                                     },
                                     8,
                                     ["title"],
                                   ))
-                                : d("", !0),
+                                : f("", !0),
                             ]),
                           ]),
                           _: 1,
@@ -859,118 +661,118 @@ function Xe(a, t, r, e, n, c) {
                         8,
                         ["result"],
                       ))
-                    : d("", !0),
+                    : f("", !0),
                 ],
                 512,
               ),
             ],
             512,
           ),
-          [[K, !e.isSchemasLoading]],
+          [[B, !e.isSchemasLoading]],
         ),
       ],
       64,
     )
   );
 }
-const Ze = R(ze, [["render", Xe]]);
-async function $e(a) {
+const Ie = x(Ve, [["render", Fe]]);
+async function Ke(t) {
   const {
-    data: t,
-    error: r,
+    data: r,
+    error: a,
     isLoading: e,
-  } = await E(
-    `/api/selfDescriptions?q=${a}`,
+  } = await L(
+    `/api/selfDescriptions?q=${encodeURIComponent(t)}`,
     {
       method: "GET",
       errorIdentifier: "QUICK_SEARCH_ERROR",
       apiName: "quick search",
       defaultData: [],
     },
-    W,
+    z,
   );
-  return { data: t, error: r, isLoading: e };
+  return { data: r, error: a, isLoading: e };
 }
-const er = y({
+const Ue = R({
     __name: "QuickSearch",
     props: { search: {} },
-    setup(a, { expose: t }) {
-      t();
-      const r = h([]),
-        e = h(null),
-        n = h(!1),
-        c = a,
-        l = h(c.search),
-        f = async () => {
-          if (!c.search) return;
+    setup(t, { expose: r }) {
+      r();
+      const a = u([]),
+        e = u(null),
+        n = u(!1),
+        i = t,
+        c = u(i.search),
+        h = async () => {
+          if (!i.search) return;
           n.value = !0;
-          const { data: C, error: D } = await $e(c.search);
-          (D.value ? (e.value = D.value) : C.value && (r.value = C.value),
+          const { data: k, error: C } = await Ke(i.search);
+          (C.value ? (e.value = C.value) : k.value && (a.value = k.value),
             (n.value = !1));
         };
-      de(f);
-      const p = {
-        result: r,
+      le(h);
+      const m = {
+        result: a,
         errorDetails: e,
         isLoading: n,
-        props: c,
-        localSearchValue: l,
-        performSearch: f,
+        props: i,
+        localSearchValue: c,
+        performSearch: h,
         get SLoadingSpinner() {
-          return G;
+          return q;
         },
         get SStatusMessage() {
-          return z;
+          return U;
         },
         get SInput() {
-          return te;
+          return oe;
         },
         get SButton() {
-          return j;
+          return Q;
         },
-        SearchResults: J,
+        SearchResults: G,
       };
       return (
-        Object.defineProperty(p, "__isScriptSetup", {
+        Object.defineProperty(m, "__isScriptSetup", {
           enumerable: !1,
           value: !0,
         }),
-        p
+        m
       );
     },
   }),
-  rr = {
+  qe = {
     action: "/",
     method: "get",
     class: "mb-4 flex flex-row justify-start gap-4 pt-4",
   },
-  ar = { key: 1 },
-  tr = { key: 1 };
-function sr(a, t, r, e, n, c) {
+  Qe = { key: 1 },
+  Ge = { key: 1 };
+function ze(t, r, a, e, n, i) {
   return (
     s(),
     o(
-      g,
+      p,
       null,
       [
-        u("form", rr, [
-          S(
+        d("form", qe, [
+          v(
             e.SInput,
             {
               id: "quick-search-inpage",
               class: "w-full max-w-screen-md flex-grow",
               name: "search",
               type: "text",
-              placeholder: "Cerca ràpida",
+              placeholder: "Quick search",
               modelValue: e.localSearchValue,
               "onUpdate:modelValue":
-                t[0] || (t[0] = (l) => (e.localSearchValue = l)),
+                r[0] || (r[0] = (c) => (e.localSearchValue = c)),
             },
             null,
             8,
             ["modelValue"],
           ),
-          S(e.SButton, {
+          v(e.SButton, {
             class: "quick-search-button",
             label: "Cerca",
             icon: "search",
@@ -979,15 +781,15 @@ function sr(a, t, r, e, n, c) {
             type: "submit",
           }),
         ]),
-        u("div", null, [
+        d("div", null, [
           e.isLoading
-            ? (s(), m(e.SLoadingSpinner, { key: 0 }))
-            : r.search?.length
+            ? (s(), _(e.SLoadingSpinner, { key: 0 }))
+            : a.search?.length
               ? (s(),
-                o("div", ar, [
+                o("div", Qe, [
                   e.errorDetails
                     ? (s(),
-                      m(
+                      _(
                         e.SStatusMessage,
                         {
                           key: 0,
@@ -996,8 +798,8 @@ function sr(a, t, r, e, n, c) {
                           variant: "error",
                         },
                         {
-                          default: v(() => [
-                            _(i(e.errorDetails.description), 1),
+                          default: y(() => [
+                            S(l(e.errorDetails.description), 1),
                           ]),
                           _: 1,
                         },
@@ -1005,20 +807,20 @@ function sr(a, t, r, e, n, c) {
                         ["title"],
                       ))
                     : (s(),
-                      o("div", tr, [
-                        S(
+                      o("div", Ge, [
+                        v(
                           e.SearchResults,
                           { result: e.result },
                           {
-                            details: v(() => [
-                              t[1] ||
-                                (t[1] = u(
+                            details: y(() => [
+                              r[1] ||
+                                (r[1] = d(
                                   "strong",
                                   null,
-                                  "Per a la cadena de cerca:",
+                                  "for the search string:",
                                   -1,
                                 )),
-                              _(" " + i(e.props.search), 1),
+                              S(" " + l(e.props.search), 1),
                             ]),
                             _: 1,
                           },
@@ -1027,29 +829,29 @@ function sr(a, t, r, e, n, c) {
                         ),
                       ])),
                 ]))
-              : d("", !0),
+              : f("", !0),
         ]),
       ],
       64,
     )
   );
 }
-const nr = R(er, [["render", sr]]),
-  or = y({
+const Je = x(Ue, [["render", ze]]),
+  He = R({
     __name: "SearchTabs",
     props: { search: {} },
-    setup(a, { expose: t }) {
-      t();
+    setup(t, { expose: r }) {
+      r();
       const e = {
         tabs: [
           { tabName: "quick-search", tabTitle: "Cerca ràpida" },
           { tabName: "advanced-search", tabTitle: "Cerca avançada" },
         ],
         get STabs() {
-          return se;
+          return ie;
         },
-        AdvancedSearch: Ze,
-        QuickSearch: nr,
+        AdvancedSearch: Ie,
+        QuickSearch: Je,
       };
       return (
         Object.defineProperty(e, "__isScriptSetup", {
@@ -1060,24 +862,24 @@ const nr = R(er, [["render", sr]]),
       );
     },
   }),
-  lr = { class: "search-tabs" };
-function cr(a, t, r, e, n, c) {
+  We = { class: "search-tabs" };
+function Ye(t, r, a, e, n, i) {
   return (
     s(),
-    o("div", lr, [
-      S(
+    o("div", We, [
+      v(
         e.STabs,
         { tabs: e.tabs },
         {
-          "quick-search": v(() => [
-            S(e.QuickSearch, { search: r.search }, null, 8, ["search"]),
+          "quick-search": y(() => [
+            v(e.QuickSearch, { search: a.search }, null, 8, ["search"]),
           ]),
-          "advanced-search": v(() => [S(e.AdvancedSearch)]),
+          "advanced-search": y(() => [v(e.AdvancedSearch)]),
           _: 1,
         },
       ),
     ])
   );
 }
-const Sr = R(or, [["render", cr]]);
-export { Sr as default };
+const ta = x(He, [["render", Ye]]);
+export { ta as default };
