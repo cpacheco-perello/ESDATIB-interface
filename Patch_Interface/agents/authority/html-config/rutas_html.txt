@@ -7,6 +7,8 @@
 /usr/share/nginx/html/identity-provider/index.html
 /usr/share/nginx/html/usersandroles/index.html
 /usr/share/nginx/html/participant-utility/index.html
+/usr/share/nginx/html/onboarding/566.ef436edf86258396.js
+
 
 🔍 Pod: simpl-fe-participant-6fb9b85c74-p97qd
 /usr/share/nginx/html/index.html

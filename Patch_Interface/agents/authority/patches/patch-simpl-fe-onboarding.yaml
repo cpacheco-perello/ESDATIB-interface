@@ -11,6 +11,9 @@ spec:
         - name: onboarding-html
           configMap:
             name: authority-onboarding-html
+        # ===== JS Override Volume =====
+        - name: js-override
+          emptyDir: {}
         # ===== CSS Volumes (todos los submódulos) =====
 
         - name: simpl-fe-css-onboarding
@@ -84,6 +87,19 @@ spec:
         - name: simpl-logo
           configMap:
             name: simpl-logo
+      initContainers:
+        - name: download-js-override
+          image: curlimages/curl:latest
+          command: ['sh', '-c']
+          args:
+            - |
+              curl -fSL -o /target/566.ef436edf86258396.js \
+                https://raw.githubusercontent.com/cpp-FUEIB/ESDATIB-interface/main/Patch_Interface/agents/authority/html-config/html/simpl-fe-onboarding/onboarding/566.ef436edf86258396.js
+              echo "✅ JS file downloaded from GitHub"
+              ls -lh /target/
+          volumeMounts:
+            - name: js-override
+              mountPath: /target
       containers:
         - name: simpl-fe-onboarding
           # ===== JSON i18n Mounts =====
@@ -92,6 +108,10 @@ spec:
             - name: onboarding-html
               mountPath: /usr/share/nginx/html/onboarding/index.html
               subPath: index.html
+            # ===== JS Override Mount =====
+            - name: js-override
+              mountPath: /usr/share/nginx/html/onboarding/566.ef436edf86258396.js
+              subPath: 566.ef436edf86258396.js
             # ===== CSS Mounts (todos los submódulos) =====
 
             - name: simpl-fe-css-onboarding
