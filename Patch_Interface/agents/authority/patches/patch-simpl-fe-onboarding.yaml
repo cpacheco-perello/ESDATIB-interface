@@ -97,7 +97,7 @@ spec:
               subPath: index.html
             - name: onboarding-js-566
               mountPath: /usr/share/nginx/html/onboarding/566.ef436edf86258396.js
-              subPath: 566.js
+              subPath: 566.ef436edf86258396.js
             # ===== CSS Mounts (todos los submódulos) =====
 
             - name: simpl-fe-css-onboarding
