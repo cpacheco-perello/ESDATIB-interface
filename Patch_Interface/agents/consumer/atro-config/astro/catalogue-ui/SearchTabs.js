@@ -616,7 +616,7 @@ function Fe(t, r, a, e, n, i) {
                         {
                           key: 0,
                           result: e.result,
-                          "results-number-suffix": "for the parameters:",
+                          "results-number-suffix": "per els paràmetres",
                         },
                         {
                           details: y(() => [
@@ -817,7 +817,7 @@ function ze(t, r, a, e, n, i) {
                                 (r[1] = d(
                                   "strong",
                                   null,
-                                  "for the search string:",
+                                  "per la cadena de cerca:",
                                   -1,
                                 )),
                               S(" " + l(e.props.search), 1),
