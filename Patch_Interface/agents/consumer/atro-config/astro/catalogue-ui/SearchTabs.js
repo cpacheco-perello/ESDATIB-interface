@@ -763,7 +763,7 @@ function ze(t, r, a, e, n, i) {
               class: "w-full max-w-screen-md flex-grow",
               name: "search",
               type: "text",
-              placeholder: "Quick search",
+              placeholder: "Cerca ràpida",
               modelValue: e.localSearchValue,
               "onUpdate:modelValue":
                 r[0] || (r[0] = (c) => (e.localSearchValue = c)),
