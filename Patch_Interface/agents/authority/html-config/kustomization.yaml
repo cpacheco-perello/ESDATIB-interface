@@ -9,7 +9,4 @@ configMapGenerator:
   - name: authority-onboarding-html
     files:
       - index.html=html/simpl-fe-onboarding/onboarding/index.html
-  - name: authority-onboarding-js-566
-    files:
-      - 566.ef436edf86258396.js=html/simpl-fe-onboarding/onboarding/566.ef436edf86258396.js
       
