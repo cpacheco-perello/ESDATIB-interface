@@ -6,7 +6,7 @@ done | tee resultados_json.txt
 
 kubectl exec -n consumer01 catalogue-ui-7fc5644f48-jg2wt -- find / -name "*" 2>/dev/null | tee resultados_json.txt
 
-kubectl exec -n consumer01 catalogue-ui-7fc5644f48-jg2wt  -- cat /api/schemas
+kubectl exec -n consumer01 catalogue-ui-7fb6f9d7f6-nqhkq  -- cat /app/dist/server/pages/index.astro.mjs
 
 
 kubectl exec -n authority0101   -- sh -c '
