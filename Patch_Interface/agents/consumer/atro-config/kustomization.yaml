@@ -13,4 +13,4 @@ configMapGenerator:
       - index.astro=astro/catalogue-ui/index.astro
       - SearchTabs.js=astro/catalogue-ui/SearchTabs.js
       - AdvancedSearch.vue=astro/catalogue-ui/AdvancedSearch.vue
-      - QuickSearch.vue=astro/catalogue-ui/QuickSearch.vue
+      - ResourceDescriptionSummary.js=astro/catalogue-ui/ResourceDescriptionSummary.js
