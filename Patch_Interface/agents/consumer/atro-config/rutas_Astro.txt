@@ -9,3 +9,4 @@
 
 
 /app/dist/client/_astro/SearchTabs.B7fDCIoC.js
+/app/dist/client/_astro/ResourceDescriptionSummary.aUi7cN5V.js

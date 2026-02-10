@@ -4,11 +4,11 @@ for pod in $(kubectl get pods -n authority01 -o jsonpath='{.items[*].metadata.na
 done | tee resultados_json.txt    
 
 
-kubectl exec -n consumer01 catalogue-ui-7fc5644f48-k6kvd -- find / -name "Quick*" 2>/dev/null | tee resultados_json.txt
+kubectl exec -n consumer01 catalogue-ui-7fc5644f48-jg2wt -- find / -name "*" 2>/dev/null | tee resultados_json.txt
 
-kubectl exec -n consumer01 catalogue-ui-7fc5644f48-k6kvd  -- cat /app/dist/client/_astro/index.BRbk5JsM.js
+kubectl exec -n consumer01 catalogue-ui-7fc5644f48-jg2wt  -- cat /api/schemas
 
 
-kubectl exec -n authority01 simpl-fe-onboarding-56978cdfb6-d5mvl -- sh -c '
+kubectl exec -n authority0101   -- sh -c '
 find / -type f -name "*" 2>/dev/null -exec grep -l "app-onboarding-entry" {} \;
 ' | tee resultados_json.txt
