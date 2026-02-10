@@ -31,6 +31,3 @@ spec:
             - name: consumer-catalogue-ui-astro
               mountPath: /app/src/components/search/AdvancedSearch.vue
               subPath: AdvancedSearch.vue
-            - name: consumer-catalogue-ui-astro
-              mountPath: /app/dist/client/_astro/ResourceDescriptionSummary.js
-              subPath: ResourceDescriptionSummary.js
